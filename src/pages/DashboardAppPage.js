@@ -17,11 +17,16 @@ import {
   AppCurrentSubject,
   AppConversionRates,
 } from '../sections/@dashboard/app';
+// import { before } from 'lodash';
 
 // ----------------------------------------------------------------------
 
 export default function DashboardAppPage() {
   const theme = useTheme();
+
+  const explore = {
+    position: 'relative',
+  };
 
   return (
     <>
@@ -40,7 +45,7 @@ export default function DashboardAppPage() {
           sx={{ width: '100%', height: '60vh', mb: 2, borderRadius: '10px' }}
         />
 
-        <Grid container spacing={3}>
+        <Grid container spacing={3} sx={{ mb: 2 }}>
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
           </Grid>
@@ -56,8 +61,44 @@ export default function DashboardAppPage() {
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary title="Bug Reports" total={234} color="error" icon={'ant-design:bug-filled'} />
           </Grid>
+        </Grid>
+        <Typography variant="h4" sx={{ mb: 5, color: '#ccc' }}>
+          Explore
+        </Typography>
+        <Grid container spacing={3} sx={explore}>
+          <Grid item xs={12} sm={6} md={3}>
+            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+          </Grid>
 
-          <Grid item xs={12} md={6} lg={8}>
+          <Grid item xs={12} sm={6} md={3}>
+            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+          </Grid>
+        </Grid>
+
+        {/* <Grid item xs={12} md={6} lg={8}>
             <AppWebsiteVisits
               title="Website Visits"
               subheader="(+43%) than last year"
@@ -95,9 +136,9 @@ export default function DashboardAppPage() {
                 },
               ]}
             />
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12} md={6} lg={4}>
+        {/* <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
               title="Current Visits"
               chartData={[
@@ -113,9 +154,9 @@ export default function DashboardAppPage() {
                 theme.palette.error.main,
               ]}
             />
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12} md={6} lg={8}>
+        {/* <Grid item xs={12} md={6} lg={8}>
             <AppConversionRates
               title="Conversion Rates"
               subheader="(+43%) than last year"
@@ -217,8 +258,7 @@ export default function DashboardAppPage() {
                 { id: '5', label: 'Sprint Showcase' },
               ]}
             />
-          </Grid>
-        </Grid>
+          </Grid> */}
       </Container>
     </>
   );
