@@ -24,7 +24,8 @@ const StyledAccount = styled('div')(({ theme }) => ({
   alignItems: 'center',
   padding: theme.spacing(2, 2.5),
   borderRadius: Number(theme.shape.borderRadius) * 1.5,
-  backgroundColor: "#ccc",
+  backgroundColor: "#191921",
+  color: "#ccc"
 }));
 
 // ----------------------------------------------------------------------
@@ -63,7 +64,7 @@ export default function Nav({ openNav, onCloseNav }) {
             <Avatar src={account.photoURL} alt="photoURL" />
 
             <Box sx={{ ml: 2 }}>
-              <Typography variant="subtitle2" sx={{ color: 'text.primary' }}>
+              <Typography variant="subtitle2" sx={{ color: '#ccc' }}>
                 {account.displayName}
               </Typography>
 
