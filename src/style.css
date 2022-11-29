@@ -1,3 +1,19 @@
 .css-1byr0t{
     background: #111116;
 }
+.explore{
+    position: relative;
+    width: 150px;
+    margin: 0 auto;  
+}
+.explore img {vertical-align: middle;}
+.explore.content {
+    position: absolute;
+    top: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.2); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    height:100%;
+    padding: 20px;
+  }

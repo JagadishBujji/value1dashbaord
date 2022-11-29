@@ -65,36 +65,36 @@ export default function DashboardAppPage() {
         <Typography variant="h4" sx={{ mb: 5, color: '#ccc' }}>
           Explore
         </Typography>
-        <Grid container spacing={3} sx={explore}>
+        <Grid container spacing={3} sx={explore} >
           <Grid item xs={12} sm={6} md={3}>
-            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+            <img src="../../gold.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+            <img src="../../travel.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+            <img src="../../deal.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+            <img src="../../loan.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+            <img src="../../stock.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+            <img src="../../billPayment.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <img src="../../marketing.jpg" alt="" width={200} style={{ borderRadius: '10px' }} />
+            <img src="../../admission.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <img src="../../marketing.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
           </Grid>
         </Grid>
 
