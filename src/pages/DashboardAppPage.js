@@ -65,37 +65,114 @@ export default function DashboardAppPage() {
         <Typography variant="h4" sx={{ mb: 5, color: '#ccc' }}>
           Explore
         </Typography>
-        <Grid container spacing={3} sx={explore} >
-          <Grid item xs={12} sm={6} md={3}>
-            <img src="../../gold.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6} md={3} className="explore">
+            <img
+              src="../../gold.jpg"
+              alt=""
+              width={200}
+              height={150}
+              style={{ borderRadius: '10px' }}
+              className="explore-image"
+            />
+            <div className="overlay">
+              <div className="text">Digital Gold</div>
+            </div>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
-            <img src="../../travel.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
+          <Grid item xs={12} sm={6} md={3} className="explore">
+            <img
+              src="../../travel.jpg"
+              alt=""
+              width={200}
+              height={150}
+              style={{ borderRadius: '10px' }}
+              className="explore-image"
+            />
+            <div className="overlay">
+              <div className="text">Travels</div>
+            </div>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
-            <img src="../../deal.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
+          <Grid item xs={12} sm={6} md={3} className="explore">
+            <img
+              src="../../deal.jpg"
+              alt=""
+              width={200}
+              height={150}
+              style={{ borderRadius: '10px' }}
+              className="explore-image"
+            />
+            <div className="overlay">
+              <div className="text">Online Deals</div>
+            </div>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
-            <img src="../../loan.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
+          <Grid item xs={12} sm={6} md={3} className="explore">
+            <img
+              src="../../loan.jpg"
+              alt=""
+              width={200}
+              height={150}
+              style={{ borderRadius: '10px' }}
+              className="explore-image"
+            />
+            <div className="overlay">
+              <div className="text">Loans</div>
+            </div>
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <img src="../../stock.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
+          <Grid item xs={12} sm={6} md={3} className="explore">
+            <img
+              src="../../stock.jpg"
+              alt=""
+              width={200}
+              height={150}
+              style={{ borderRadius: '10px' }}
+              className="explore-image"
+            />
+            <div className="overlay">
+              <div className="text">Stocks & Capital Market</div>
+            </div>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
-            <img src="../../billPayment.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
+          <Grid item xs={12} sm={6} md={3} className="explore">
+            <img
+              src="../../billPayment.jpg"
+              alt=""
+              width={200}
+              height={150}
+              style={{ borderRadius: '10px' }}
+              className="explore-image"
+            />
+             <div className="overlay">
+              <div className="text">Bill Payment with icons</div>
+            </div>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
-            <img src="../../admission.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
+          <Grid item xs={12} sm={6} md={3} className="explore">
+            <img
+              src="../../admission.jpg"
+              alt=""
+              width={200}
+              height={150}
+              style={{ borderRadius: '10px' }}
+              className="explore-image"
+            />
+            <div className="overlay">
+              <div className="text">International Admission</div>
+            </div>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
-            <img src="../../marketing.jpg" alt="" width={200} height={150} style={{ borderRadius: '10px' }} />
-          </Grid>
+          {/* <Grid item xs={12} sm={6} md={3}>
+            <img
+              src="../../marketing.jpg"
+              alt=""
+              width={200}
+              height={150}
+              style={{ borderRadius: '10px' }}
+              className="explore-image"
+            />
+          </Grid> */}
         </Grid>
 
         {/* <Grid item xs={12} md={6} lg={8}>
