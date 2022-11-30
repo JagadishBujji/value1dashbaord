@@ -12,7 +12,6 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 700,
   bgcolor: 'background.paper',
-  border: '2px solid #000',
   boxShadow: 24,
   p: 4,
 };
@@ -34,6 +33,15 @@ const cancel ={
   }
 }
 
+const button = {
+  background: '#fabb04',
+  color: '#111116',
+  '&:hover': {
+    background: '#fabb04',
+    color: '#111116',
+  },
+};
+
 export default function AddNewModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -41,7 +49,10 @@ export default function AddNewModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Add New</Button> 
+      {/* <Button onClick={handleOpen}>Add New</Button>  */}
+      <Button sx={button} onClick={handleOpen}>
+        Add New
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
