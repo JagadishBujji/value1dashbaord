@@ -23,13 +23,15 @@ import {
   TablePagination,
 } from '@mui/material';
 // components
-import Label from '../components/label';
+// import Label from '../components/label';
 import Iconify from '../components/iconify';
-import Scrollbar from '../components/scrollbar';
+// import Scrollbar from '../components/scrollbar';
 // sections
-import { UserListHead, UserListToolbar } from '../sections/@dashboard/user';
+// import { UserListHead, UserListToolbar } from '../sections/@dashboard/user';
 // mock
 import USERLIST from '../_mock/user';
+// import Modal from 'src/Reusable/Modal/AddNewModal';
+import AddNewModal from '../Reusable/Modal/AddNewModal';
 
 // ----------------------------------------------------------------------
 
@@ -157,9 +159,7 @@ export default function UserPage() {
           <Typography sx={{color: "#ccc"}} variant="h4" gutterBottom>
             Forms
           </Typography>
-          <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
-            Add New
-          </Button>
+          <AddNewModal/>
         </Stack>
 
         {/* <Card>
