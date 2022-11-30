@@ -47,19 +47,19 @@ export default function DashboardAppPage() {
 
         <Grid container spacing={3} sx={{ mb: 2 }}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary sx={{background: "#191921"}} title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
+            <AppWidgetSummary  title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary sx={{background: "#191921"}}title="New Users" total={1352831} color="info" icon={'ant-design:apple-filled'} />
+            <AppWidgetSummary title="New Users" total={1352831} color="info" icon={'ant-design:apple-filled'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary sx={{background: "#191921"}} title="Item Orders" total={1723315} color="warning" icon={'ant-design:windows-filled'} />
+            <AppWidgetSummary  title="Item Orders" total={1723315} color="warning" icon={'ant-design:windows-filled'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary sx={{background: "#191921"}} title="Bug Reports" total={234} color="error" icon={'ant-design:bug-filled'} />
+            <AppWidgetSummary  title="Bug Reports" total={234} color="error" icon={'ant-design:bug-filled'} />
           </Grid>
         </Grid>
         <Typography variant="h4" sx={{ mb: 5, color: '#ccc' }}>

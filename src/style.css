@@ -16,25 +16,26 @@
     left: 23px;
     right: 0;
     height: 86%;
-    width: 80%;
+    width: 87%;
     opacity: 0;
     border-radius: 10px;
     transition: .5s ease;
-    background-color: #19192160;
+    background-color: #19192197;
   }
   
-  .explore:hover .overlay {
+  .overlay {
     opacity: 1;
   }
   
   .text {
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 21%;
+    left: 32%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+    padding: 10px;
   }
