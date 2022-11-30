@@ -16,6 +16,15 @@ const style = {
   p: 4,
 };
 
+const button = {
+  background: '#fabb04',
+  color: '#111116',
+  '&:hover': {
+    background: '#fabb04',
+    color: '#111116',
+  },
+};
+
 export default function AddNewModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -23,7 +32,9 @@ export default function AddNewModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Add New</Button>
+      <Button sx={button} onClick={handleOpen}>
+        Add New
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -34,7 +45,6 @@ export default function AddNewModal() {
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Title
           </Typography>
-         
         </Box>
       </Modal>
     </div>

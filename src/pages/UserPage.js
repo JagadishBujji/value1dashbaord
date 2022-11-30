@@ -23,11 +23,11 @@ import {
   TablePagination,
 } from '@mui/material';
 // components
-// import Label from '../components/label';
+import Label from '../components/label';
 import Iconify from '../components/iconify';
-// import Scrollbar from '../components/scrollbar';
+import Scrollbar from '../components/scrollbar';
 // sections
-// import { UserListHead, UserListToolbar } from '../sections/@dashboard/user';
+import { UserListHead, UserListToolbar } from '../sections/@dashboard/user';
 // mock
 import USERLIST from '../_mock/user';
 // import Modal from 'src/Reusable/Modal/AddNewModal';
@@ -36,11 +36,14 @@ import AddNewModal from '../Reusable/Modal/AddNewModal';
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
-  { id: 'name', label: 'Name', alignRight: false },
-  { id: 'company', label: 'Company', alignRight: false },
-  { id: 'role', label: 'Role', alignRight: false },
-  { id: 'isVerified', label: 'Verified', alignRight: false },
-  { id: 'status', label: 'Status', alignRight: false },
+  { id: 'Sino', label: 'Slno', alignRight: false },
+  { id: 'company', label: 'Deed Type', alignRight: false },
+  { id: 'role', label: 'Type', alignRight: false },
+  { id: 'isVerified', label: 'Date/Time', alignRight: false },
+  { id: 'isVerified', label: 'file', alignRight: false },
+  { id: 'isVerified', label: 'Admin Verification', alignRight: false },
+  { id: 'isVerified', label: 'Coins', alignRight: false },
+  // { id: 'status', label: 'Status', alignRight: false },
   { id: '' },
 ];
 
@@ -156,17 +159,17 @@ export default function UserPage() {
 
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
-          <Typography sx={{color: "#ccc"}} variant="h4" gutterBottom>
+          <Typography sx={{ color: '#ccc' }} variant="h4" gutterBottom>
             Forms
           </Typography>
-          <AddNewModal/>
+          <AddNewModal />
         </Stack>
 
-        {/* <Card>
+        <Card>
           <UserListToolbar numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} />
 
           <Scrollbar>
-            <TableContainer sx={{ minWidth: 800 }}>
+            <TableContainer sx={{ minWidth: 1000 }}>
               <Table>
                 <UserListHead
                   order={order}
@@ -190,22 +193,26 @@ export default function UserPage() {
 
                         <TableCell component="th" scope="row" padding="none">
                           <Stack direction="row" alignItems="center" spacing={2}>
-                            <Avatar alt={name} src={avatarUrl} />
                             <Typography variant="subtitle2" noWrap>
-                              {name}
+                              1
                             </Typography>
                           </Stack>
                         </TableCell>
 
-                        <TableCell align="left">{company}</TableCell>
-
-                        <TableCell align="left">{role}</TableCell>
-
-                        <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
+                        <TableCell align="left">Organ Donation</TableCell>
 
                         <TableCell align="left">
                           <Label color={(status === 'banned' && 'error') || 'success'}>{sentenceCase(status)}</Label>
                         </TableCell>
+
+                        <TableCell align="left">30/11/2022 1:36</TableCell>
+                        <TableCell align="left">PDF</TableCell>
+                        <TableCell align="left">
+                          <Label color={isVerified ? 'success' : 'error'}>{sentenceCase(isVerified ? 'Verified' : 'Not Verified')}</Label>
+                        </TableCell>
+                        <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
+
+                        {/* <TableCell align="left">{role}</TableCell> */}
 
                         <TableCell align="right">
                           <IconButton size="large" color="inherit" onClick={handleOpenMenu}>
@@ -258,7 +265,7 @@ export default function UserPage() {
             onPageChange={handleChangePage}
             onRowsPerPageChange={handleChangeRowsPerPage}
           />
-        </Card> */}
+        </Card>
       </Container>
 
       <Popover
