@@ -160,7 +160,7 @@ export default function UserPage() {
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography sx={{ color: '#ccc' }} variant="h4" gutterBottom>
-            Forms
+            Form
           </Typography>
           <AddNewModal />
         </Stack>
