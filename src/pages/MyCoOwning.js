@@ -9,7 +9,7 @@ import PRODUCTS from '../_mock/products';
 
 // ----------------------------------------------------------------------
 
-export default function ProductsPage() {
+export default function MyCoOwning() {
   const [openFilter, setOpenFilter] = useState(false);
 
   const handleOpenFilter = () => {

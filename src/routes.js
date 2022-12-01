@@ -3,12 +3,14 @@ import { Navigate, useRoutes } from 'react-router-dom';
 import DashboardLayout from './layouts/dashboard';
 import SimpleLayout from './layouts/simple';
 //
-import BlogPage from './pages/BlogPage';
+import ValueCoins from './pages/ValueCoins';
 import UserPage from './pages/UserPage';
 import LoginPage from './pages/LoginPage';
-import Page404 from './pages/Page404';
-import ProductsPage from './pages/ProductsPage';
+// import Page404 from './pages/Page404';
+import MyCoOwning from './pages/MyCoOwning';
 import DashboardAppPage from './pages/DashboardAppPage';
+import GoldCoins from './pages/GoldCoins';
+import RevenueStore from './pages/RevenueStore';
 
 // ----------------------------------------------------------------------
 
@@ -19,10 +21,12 @@ export default function Router() {
       element: <DashboardLayout />,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
-        { path: 'app', element: <DashboardAppPage  /> },
-        { path: 'user', element: <UserPage /> },
-        { path: 'products', element: <ProductsPage /> },
-        { path: 'blog', element: <BlogPage /> },
+        { path: 'app', element: <DashboardAppPage /> },
+        { path: 'myco-owning', element: <MyCoOwning /> },
+        { path: 'my-value-coins', element: <ValueCoins /> },
+        { path: 'my-gold-coins', element: <GoldCoins /> },
+        { path: 'revenue-store', element: <RevenueStore /> },
+        { path: 'value', element: <UserPage /> },
       ],
     },
     {
@@ -33,7 +37,7 @@ export default function Router() {
       element: <SimpleLayout />,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
-        { path: '404', element: <Page404 /> },
+        // { path: '404', element: <Page404 /> },
         { path: '*', element: <Navigate to="/404" /> },
       ],
     },

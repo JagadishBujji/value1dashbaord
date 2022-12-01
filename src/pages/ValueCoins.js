@@ -17,7 +17,7 @@ const SORT_OPTIONS = [
 
 // ----------------------------------------------------------------------
 
-export default function BlogPage() {
+export default function ValueCoins() {
   return (
     <>
       <Helmet>

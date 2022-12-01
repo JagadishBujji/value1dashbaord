@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet-async';
+// import Button from '@mui/material/Button';
 // import { faker } from '@faker-js/faker';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Grid, Container, Typography, Box, Drawer } from '@mui/material';
+import { Grid, Container, Typography, Box} from '@mui/material';
 // components
 // import Iconify from '../components/iconify';
 // sections
@@ -35,17 +36,29 @@ export default function DashboardAppPage() {
           sx={{ width: '100%', height: '60vh', mb: 2, borderRadius: '10px' }}
         />
 
-        <Grid container spacing={3} sx={{ mb: 2 }}>
+        <Grid container spacing={3} sx={{ mb: 5 }}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="My Value Coins" total={550000} icon={'ant-design:android-filled'} />
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="My Gold Coins" total={1352831} color="info" icon={'ant-design:apple-filled'} />
+            <AppWidgetSummary
+              sx={{ background: '#DFCA77', color: '#000' }}
+              title="My Value Coins"
+              total={550000}
+              icon={'ant-design:android-filled'}
+            />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary
+              sx={{ background: '#DFCA77', color: '#000' }}
+              title="My Gold Coins"
+              total={1352831}
+              color="info"
+              icon={'ant-design:apple-filled'}
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <AppWidgetSummary
+              sx={{ background: '#DFCA77', color: '#000' }}
               title="Today's Gold Rate"
               total={1723315}
               color="warning"
@@ -55,6 +68,7 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary
+              sx={{ background: '#DFCA77', color: '#000' }}
               title="Human Development Index"
               total={234}
               color="error"
@@ -175,21 +189,33 @@ export default function DashboardAppPage() {
             />
           </Grid> */}
         </Grid>
-        <Typography variant="h4" sx={{ mb: 5, color: '#ccc' }}>
+        <Typography variant="h4" sx={{ mb: 5, mt: 5, color: '#ccc' }}>
           Value Store
         </Typography>
 
         <Grid container spacing={3} sx={{ mb: 2 }}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Good Deeds" total={714000} icon={'ant-design:android-filled'} />
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Value Brands" total={1352831} color="info" icon={'ant-design:apple-filled'} />
+            <AppWidgetSummary
+              sx={{ background: '#DFCA77', color: '#000' }}
+              title="Good Deeds"
+              total={714000}
+              icon={'ant-design:android-filled'}
+            />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary
+              sx={{ background: '#DFCA77', color: '#000' }}
+              title="Value Brands"
+              total={1352831}
+              color="info"
+              icon={'ant-design:apple-filled'}
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <AppWidgetSummary
+              sx={{ background: '#DFCA77', color: '#000' }}
               title="Value Expenses"
               total={1723315}
               color="warning"
