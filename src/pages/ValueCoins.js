@@ -1,11 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 // @mui
-import { Grid, Button, Container, Stack, Typography } from '@mui/material';
+import { Grid, Container, Stack, Typography } from '@mui/material';
+import AppWidgetSummary from '../sections/@dashboard/app/AppWidgetSummary';
+import ValueTable from '../Reusable/Table/ValueTable';
 // components
-import Iconify from '../components/iconify';
-import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../sections/@dashboard/blog';
+// import Iconify from '../components/iconify';
+// import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../sections/@dashboard/blog';
 // mock
-import POSTS from '../_mock/blog';
+// import POSTS from '../_mock/blog';
 
 // ----------------------------------------------------------------------
 
@@ -21,29 +23,30 @@ export default function ValueCoins() {
   return (
     <>
       <Helmet>
-        <title> Dashboard: Blog | Minimal UI </title>
+        <title> Value Coins | Minimal UI </title>
       </Helmet>
 
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
-          <Typography variant="h4" gutterBottom>
-            Blog
+          <Typography sx={{ color: '#fff' }} variant="h4" gutterBottom>
+            Value Coins
           </Typography>
-          <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
+          {/* <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
             New Post
-          </Button>
+          </Button> */}
         </Stack>
 
-        <Stack mb={5} direction="row" alignItems="center" justifyContent="space-between">
-          <BlogPostsSearch posts={POSTS} />
-          <BlogPostsSort options={SORT_OPTIONS} />
-        </Stack>
-
-        <Grid container spacing={3}>
-          {POSTS.map((post, index) => (
-            <BlogPostCard key={post.id} post={post} index={index} />
-          ))}
+        <Grid container spacing={3} sx={{ mb: 2 }}>
+          <Grid item xs={12} sm={6} md={3}>
+            <AppWidgetSummary
+              sx={{ background: '#DFCA77', color: '#000' }}
+              title="Value Coins"
+              total={500}
+              icon={'ant-design:android-filled'}
+            />
+          </Grid>
         </Grid>
+        <ValueTable />
       </Container>
     </>
   );
