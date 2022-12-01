@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Dropdown from '../Dropdown/Dropdown';
 
+
 const style = {
   position: 'absolute',
   top: '50%',
@@ -15,23 +16,23 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-const save ={
-  bgcolor:'#FABB04',
-  color:'#111116',
-  mr: 5 ,
-  '&:hover':{
-    bgcolor:'#FABB04',
-    color:'#111116'
-  }
-}
-const cancel ={
+const save = {
+  bgcolor: '#FABB04',
+  color: '#111116',
+  mr: 5,
+  '&:hover': {
+    bgcolor: '#FABB04',
+    color: '#111116',
+  },
+};
+const cancel = {
   border: '1px solid #FABB04',
-  color:'#111116',
-  '&:hover':{
-    border:'1px solid #FABB04',
-    color:'#111116'
-  }
-}
+  color: '#111116',
+  '&:hover': {
+    border: '1px solid #FABB04',
+    color: '#111116',
+  },
+};
 
 const button = {
   background: '#fabb04',
@@ -46,13 +47,16 @@ export default function AddNewModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  
 
   return (
     <div>
       {/* <Button onClick={handleOpen}>Add New</Button>  */}
+      
       <Button sx={button} onClick={handleOpen}>
         Add New
       </Button>
+         
       <Modal
         open={open}
         onClose={handleClose}
@@ -60,19 +64,25 @@ export default function AddNewModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+        {/* <div className="formHeadBtn"> */}
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Title
           </Typography>
-          <Dropdown value1 = "Organ" value2 = "Blood" value3="others" title="Good Deed Type"/>
-          <Dropdown value1 ="Pledge" value2 = "Action" title="Type"/>
-          <Dropdown value1 ="Complete" value2 = "Incomplete" title="Status"/>
+          {/* <h5 className="CloseButton">
+            <span onClick={handleClose}>X</span>
+          </h5>
+          </div> */}
+          <Dropdown value1="Organ" value2="Blood" value3="others" title="Good Deed Type" />
+          <Dropdown value1="Pledge" value2="Action" title="Type" />
+          <Dropdown value1="Complete" value2="Incomplete" title="Status" />
+          {/* <UploadFile /> */}
           <div className="row FormBtn">
-            <Button variant="contained" sx={save}
-            onClick={handleClose}
-            >
+            <Button variant="contained" sx={save} onClick={handleClose}>
               Submit
             </Button>
-            <Button variant="outlined" sx={cancel} onClick={handleClose}>Cancel</Button>
+            <Button variant="outlined" sx={cancel} onClick={handleClose}>
+              Cancel
+            </Button>
           </div>
         </Box>
       </Modal>
