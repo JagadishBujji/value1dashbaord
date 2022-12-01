@@ -11,9 +11,10 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 700,
+  width: 600,
   bgcolor: 'background.paper',
   boxShadow: 24,
+  borderRadius: "10px",
   p: 4,
 };
 const save = {
@@ -76,6 +77,12 @@ export default function AddNewModal() {
           <Dropdown value1="Pledge" value2="Action" title="Type" />
           <Dropdown value1="Complete" value2="Incomplete" title="Status" />
           {/* <UploadFile /> */}
+          <Typography sx={{ mb: 2 }} id="modal-modal-title" variant="h6" component="h2">
+            Form
+          </Typography>
+          <Dropdown value1="Organ" value2="Blood" value3="others" title="Good Deed Type" />
+          <Dropdown value1="Pledge" value2="Action" title="Type" />
+          <Dropdown value1="Complete" value2="Incomplete" title="Status" />
           <div className="row FormBtn">
             <Button variant="contained" sx={save} onClick={handleClose}>
               Submit
