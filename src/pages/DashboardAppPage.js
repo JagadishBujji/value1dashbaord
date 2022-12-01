@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 // import { faker } from '@faker-js/faker';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Grid, Container, Typography, Box } from '@mui/material';
+import { Grid, Container, Typography, Box, Drawer } from '@mui/material';
 // components
 // import Iconify from '../components/iconify';
 // sections
@@ -31,29 +31,40 @@ export default function DashboardAppPage() {
 
         <Box
           component="img"
-          src="../../stocks.jpg"
+          src="../../banner1.png"
           sx={{ width: '100%', height: '60vh', mb: 2, borderRadius: '10px' }}
         />
 
         <Grid container spacing={3} sx={{ mb: 2 }}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
+            <AppWidgetSummary title="My Value Coins" total={550000} icon={'ant-design:android-filled'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="New Users" total={1352831} color="info" icon={'ant-design:apple-filled'} />
+            <AppWidgetSummary title="My Gold Coins" total={1352831} color="info" icon={'ant-design:apple-filled'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Item Orders" total={1723315} color="warning" icon={'ant-design:windows-filled'} />
+            <AppWidgetSummary
+              title="Today's Gold Rate"
+              total={1723315}
+              color="warning"
+              icon={'ant-design:windows-filled'}
+            />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Bug Reports" total={234} color="error" icon={'ant-design:bug-filled'} />
+            <AppWidgetSummary
+              title="Human Development Index"
+              total={234}
+              color="error"
+              icon={'ant-design:bug-filled'}
+            />
           </Grid>
         </Grid>
+
         <Typography variant="h4" sx={{ mb: 5, color: '#ccc' }}>
-          Explore
+          Revenue Store
         </Typography>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3} className="explore">
@@ -161,6 +172,37 @@ export default function DashboardAppPage() {
               height={150}
               style={{ borderRadius: '10px' }}
               className="explore-image"
+            />
+          </Grid> */}
+        </Grid>
+        <Typography variant="h4" sx={{ mb: 5, color: '#ccc' }}>
+          Value Store
+        </Typography>
+
+        <Grid container spacing={3} sx={{ mb: 2 }}>
+          <Grid item xs={12} sm={6} md={3}>
+            <AppWidgetSummary title="Good Deeds" total={714000} icon={'ant-design:android-filled'} />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <AppWidgetSummary title="Value Brands" total={1352831} color="info" icon={'ant-design:apple-filled'} />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <AppWidgetSummary
+              title="Value Expenses"
+              total={1723315}
+              color="warning"
+              icon={'ant-design:windows-filled'}
+            />
+          </Grid>
+
+          {/* <Grid item xs={12} sm={6} md={3}>
+            <AppWidgetSummary
+              title="Human Development Index"
+              total={234}
+              color="error"
+              icon={'ant-design:bug-filled'}
             />
           </Grid> */}
         </Grid>
