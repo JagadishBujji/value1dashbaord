@@ -12,7 +12,17 @@ const navConfig = [
     icon: icon('ic_analytics'),
   },
   {
-    title: 'My Co-Owning Journey',
+    title: 'My Value Coins',
+    path: '/dashboard/user',
+    icon: icon('ic_user'),
+  },
+  {
+    title: 'My Gold Coins',
+    path: '/dashboard/user',
+    icon: icon('ic_user'),
+  },
+  {
+    title: 'Good Deeds',
     path: '/dashboard/user',
     icon: icon('ic_user'),
   },

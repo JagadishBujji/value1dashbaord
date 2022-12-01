@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Dropdown from '../Dropdown/Dropdown';
 
+
 const style = {
   position: 'absolute',
   top: '50%',
@@ -47,13 +48,16 @@ export default function AddNewModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  
 
   return (
     <div>
       {/* <Button onClick={handleOpen}>Add New</Button>  */}
+      
       <Button sx={button} onClick={handleOpen}>
         Add New
       </Button>
+         
       <Modal
         open={open}
         onClose={handleClose}
@@ -61,6 +65,18 @@ export default function AddNewModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+        {/* <div className="formHeadBtn"> */}
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Title
+          </Typography>
+          {/* <h5 className="CloseButton">
+            <span onClick={handleClose}>X</span>
+          </h5>
+          </div> */}
+          <Dropdown value1="Organ" value2="Blood" value3="others" title="Good Deed Type" />
+          <Dropdown value1="Pledge" value2="Action" title="Type" />
+          <Dropdown value1="Complete" value2="Incomplete" title="Status" />
+          {/* <UploadFile /> */}
           <Typography sx={{ mb: 2 }} id="modal-modal-title" variant="h6" component="h2">
             Form
           </Typography>
