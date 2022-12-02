@@ -11,11 +11,20 @@ import MyCoOwning from './pages/MyCoOwning';
 import DashboardAppPage from './pages/DashboardAppPage';
 import GoldCoins from './pages/GoldCoins';
 import RevenueStore from './pages/RevenueStore';
+import RegisterPage from './pages/RegisterPage';
 
 // ----------------------------------------------------------------------
 
 export default function Router() {
   const routes = useRoutes([
+    {
+      path: '/login',
+      element: <LoginPage />,
+    },
+    {
+      path: '/register',
+      element: <RegisterPage />,
+    },
     {
       path: '/dashboard',
       element: <DashboardLayout />,
@@ -29,10 +38,7 @@ export default function Router() {
         { path: 'value', element: <UserPage /> },
       ],
     },
-    {
-      path: 'login',
-      element: <LoginPage />,
-    },
+
     {
       element: <SimpleLayout />,
       children: [

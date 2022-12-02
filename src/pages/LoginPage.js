@@ -1,107 +1,69 @@
-import { Helmet } from 'react-helmet-async';
-// @mui
-import { styled } from '@mui/material/styles';
-import { Link, Container, Typography, Divider, Stack, Button } from '@mui/material';
-// hooks
-import useResponsive from '../hooks/useResponsive';
-// components
-import Logo from '../components/logo';
-import Iconify from '../components/iconify';
-// sections
-import { LoginForm } from '../sections/auth/login';
+import React, { useState } from "react";
+import "../style.css"
 
-// ----------------------------------------------------------------------
+const LoginPage = () => {
+  const [isPhone, setIsPhone] = useState(true);
 
-const StyledRoot = styled('div')(({ theme }) => ({
-  [theme.breakpoints.up('md')]: {
-    display: 'flex',
-  },
-}));
+  // const onChangeHandler = () => {};
 
-const StyledSection = styled('div')(({ theme }) => ({
-  width: '100%',
-  maxWidth: 480,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  boxShadow: theme.customShadows.card,
-  backgroundColor: theme.palette.background.default,
-}));
+  const sendOtpHandler = (e) => {
+    e.preventDefault();
+    setIsPhone(false);
+  };
 
-const StyledContent = styled('div')(({ theme }) => ({
-  maxWidth: 480,
-  margin: 'auto',
-  minHeight: '100vh',
-  display: 'flex',
-  justifyContent: 'center',
-  flexDirection: 'column',
-  padding: theme.spacing(12, 0),
-}));
-
-// ----------------------------------------------------------------------
-
-export default function LoginPage() {
-  const mdUp = useResponsive('up', 'md');
+  const loginHandler = (e) => {
+    e.preventDefault();
+    setIsPhone(true);
+  };
 
   return (
     <>
-      <Helmet>
-        <title> Login | Minimal UI </title>
-      </Helmet>
+      <div className="container loginform">
+        <div className="container-wrapper">
+          <div className="logo-img">
+            <img src="../logo1.png" alt="" className="logo" />
+          </div>
 
-      <StyledRoot>
-        <Logo
-          sx={{
-            position: 'fixed',
-            top: { xs: 16, sm: 24, md: 40 },
-            left: { xs: 16, sm: 24, md: 40 },
-          }}
-        />
+          <h3 className="login-text">Login</h3>
+          {isPhone ? (
+            <form>
+              <div className="item">
+                <input
+                  className="input"
+                  type="tel"
+                  placeholder="Phone Number"
+                />
+              </div>
+              <div className="item submit">
+                <button type="submit" onClick={sendOtpHandler}>
+                  Send OTP
+                </button>
+              </div>
+            </form>
+          ) : (
+            <form>
+              <div className="item">
+                <input className="input" type="number" placeholder="OTP" />{" "}
+              </div>
+              <div className="item submit">
+                <button type="submit" onClick={loginHandler}>
+                  Login
+                </button>
+              </div>
+              <span className="remember">
+                {" "}
+                <a href="#">Resend OTP</a>{" "}
+              </span>
+            </form>
+          )}
 
-        {mdUp && (
-          <StyledSection>
-            <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-              Hi, Welcome Back
-            </Typography>
-            <img src="/assets/illustrations/illustration_login.png" alt="login" />
-          </StyledSection>
-        )}
-
-        <Container maxWidth="sm">
-          <StyledContent>
-            <Typography variant="h4" gutterBottom>
-              Sign in to Minimal
-            </Typography>
-
-            <Typography variant="body2" sx={{ mb: 5 }}>
-              Don’t have an account? {''}
-              <Link variant="subtitle2">Get started</Link>
-            </Typography>
-
-            <Stack direction="row" spacing={2}>
-              <Button fullWidth size="large" color="inherit" variant="outlined">
-                <Iconify icon="eva:google-fill" color="#DF3E30" width={22} height={22} />
-              </Button>
-
-              <Button fullWidth size="large" color="inherit" variant="outlined">
-                <Iconify icon="eva:facebook-fill" color="#1877F2" width={22} height={22} />
-              </Button>
-
-              <Button fullWidth size="large" color="inherit" variant="outlined">
-                <Iconify icon="eva:twitter-fill" color="#1C9CEA" width={22} height={22} />
-              </Button>
-            </Stack>
-
-            <Divider sx={{ my: 3 }}>
-              <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                OR
-              </Typography>
-            </Divider>
-
-            <LoginForm />
-          </StyledContent>
-        </Container>
-      </StyledRoot>
+          <span className="ac">
+            Don't have an Account? <a href="/register">Sign Up</a>
+          </span>
+        </div>
+      </div>
     </>
   );
-}
+};
+
+export default LoginPage;
