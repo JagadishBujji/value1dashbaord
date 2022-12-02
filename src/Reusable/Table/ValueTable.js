@@ -43,7 +43,7 @@ export default function ValueTable() {
         pageSize={5}
         rowsPerPageOptions={[5]}
         checkboxSelection
-        sx={{color: "#fff", mt: 5, background: "#191921"}}
+        sx={{color: "#ccc", mt: 5, background: "#191921", border: "none"}}
       />
     </div>
   );

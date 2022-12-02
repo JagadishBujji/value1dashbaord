@@ -169,7 +169,7 @@ export default function UserPage() {
           <UserListToolbar numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} />
 
           <Scrollbar>
-            <TableContainer sx={{ minWidth: 1000 }}>
+            <TableContainer sx={{ minWidth: 1000, color: '#fff' }}>
               <Table>
                 <UserListHead
                   order={order}
@@ -180,18 +180,18 @@ export default function UserPage() {
                   onRequestSort={handleRequestSort}
                   onSelectAllClick={handleSelectAllClick}
                 />
-                <TableBody>
+                <TableBody sx={{ background: '#111116' }}>
                   {filteredUsers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
                     const { id, name, role, status, company, avatarUrl, isVerified } = row;
                     const selectedUser = selected.indexOf(name) !== -1;
 
                     return (
                       <TableRow hover key={id} tabIndex={-1} role="checkbox" selected={selectedUser}>
-                        <TableCell padding="checkbox">
+                        <TableCell padding="checkbox" sx={{ color: '#ccc' }}>
                           <Checkbox checked={selectedUser} onChange={(event) => handleClick(event, name)} />
                         </TableCell>
 
-                        <TableCell component="th" scope="row" padding="none">
+                        <TableCell component="th" scope="row" padding="none" sx={{ color: '#fff' }}>
                           <Stack direction="row" alignItems="center" spacing={2}>
                             <Typography variant="subtitle2" noWrap>
                               1
@@ -199,22 +199,32 @@ export default function UserPage() {
                           </Stack>
                         </TableCell>
 
-                        <TableCell align="left">Organ Donation</TableCell>
+                        <TableCell align="left" sx={{ color: '#ccc' }}>
+                          Organ Donation
+                        </TableCell>
 
-                        <TableCell align="left">
+                        <TableCell align="left" sx={{ color: '#ccc' }}>
                           <Label color={(status === 'banned' && 'error') || 'success'}>{sentenceCase(status)}</Label>
                         </TableCell>
 
-                        <TableCell align="left">30/11/2022 1:36</TableCell>
-                        <TableCell align="left">PDF</TableCell>
-                        <TableCell align="left">
-                          <Label color={isVerified ? 'success' : 'error'}>{sentenceCase(isVerified ? 'Verified' : 'Not Verified')}</Label>
+                        <TableCell align="left" sx={{ color: '#ccc' }}>
+                          30/11/2022 1:36
                         </TableCell>
-                        <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
+                        <TableCell align="left" sx={{ color: '#ccc' }}>
+                          PDF
+                        </TableCell>
+                        <TableCell align="left" sx={{ color: '#ccc' }}>
+                          <Label color={isVerified ? 'success' : 'error'}>
+                            {sentenceCase(isVerified ? 'Verified' : 'Not Verified')}
+                          </Label>
+                        </TableCell>
+                        <TableCell align="left" sx={{ color: '#ccc' }}>
+                          {isVerified ? 'Yes' : 'No'}
+                        </TableCell>
 
                         {/* <TableCell align="left">{role}</TableCell> */}
 
-                        <TableCell align="right">
+                        <TableCell align="right" sx={{ color: '#ccc' }}>
                           <IconButton size="large" color="inherit" onClick={handleOpenMenu}>
                             <Iconify icon={'eva:more-vertical-fill'} />
                           </IconButton>
@@ -264,6 +274,7 @@ export default function UserPage() {
             page={page}
             onPageChange={handleChangePage}
             onRowsPerPageChange={handleChangeRowsPerPage}
+            sx={{ background: '#111116', color: '#ccc' }}
           />
         </Card>
       </Container>

@@ -25,6 +25,7 @@ export default function Router() {
       path: '/register',
       element: <RegisterPage />,
     },
+
     {
       path: '/dashboard',
       element: <DashboardLayout />,

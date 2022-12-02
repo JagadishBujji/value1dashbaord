@@ -12,6 +12,10 @@
   width: 100%;
 }
 
+.css-vluhx3-MuiPaper-root-MuiCard-root{
+  background-color: #111116;
+}
+
 .overlay {
   position: absolute;
   top: 24px;
@@ -186,7 +190,7 @@ form {
 
 * {
   font-family: 'Varela Round', sans-serif;
-  color: #111116;
+  /* color: #111116; */
 }
 
 .ac a {
