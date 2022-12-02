@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { NavLink as RouterLink } from 'react-router-dom';
+// import { NavLink as RouterLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 // @mui
 import { Box, List, ListItemText } from '@mui/material';
 //
@@ -34,7 +35,7 @@ function NavItem({ item }) {
 
   return (
     <StyledNavItem
-      component={RouterLink}
+      component={NavHashLink}
       to={path}
       sx={{
         '&.active': {
