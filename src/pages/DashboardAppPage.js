@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+
 import Button from '@mui/material/Button';
 // import { faker } from '@faker-js/faker';
 // @mui
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import { Grid, Container, Typography, Box } from '@mui/material';
 // components
@@ -11,6 +12,7 @@ import { Grid, Container, Typography, Box } from '@mui/material';
 // sections
 import AddNewModal from '../Reusable/Modal/AddNewModal';
 import { AppWidgetSummary } from '../sections/@dashboard/app';
+
 // import { before } from 'lodash';
 
 // ----------------------------------------------------------------------
@@ -54,22 +56,26 @@ export default function DashboardAppPage() {
 
         <Grid container spacing={3} sx={{ mb: 5 }}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary
-              sx={{ background: '#DFCA77', color: '#000' }}
-              title="My Value Coins"
-              total={550000}
-              icon={'ant-design:android-filled'}
-            />
+            <Link style={{ textDecoration: 'none' }} to="/dashboard/my-value-coins">
+              <AppWidgetSummary
+                sx={{ background: '#DFCA77', color: '#000' }}
+                title="My Value Coins"
+                total={550000}
+                icon={'ant-design:android-filled'}
+              />
+            </Link>
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary
-              sx={{ background: '#DFCA77', color: '#000' }}
-              title="My Gold Coins"
-              total={1352831}
-              color="info"
-              icon={'ant-design:apple-filled'}
-            />
+            <Link style={{ textDecoration: 'none' }} to="/dashboard/my-gold-coins">
+              <AppWidgetSummary
+                sx={{ background: '#DFCA77', color: '#000' }}
+                title="My Gold Coins"
+                total={1352831}
+                color="info"
+                icon={'ant-design:apple-filled'}
+              />
+            </Link>
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
@@ -249,9 +255,14 @@ export default function DashboardAppPage() {
               color="info"
               icon={'ant-design:apple-filled'}
             />
-            <Button variant="contained" className="ValueCardBtn" sx={collectBtn} onClick={() => {
-              navigate('/dashboard/valuebrands');
-            }}>
+            <Button
+              variant="contained"
+              className="ValueCardBtn"
+              sx={collectBtn}
+              onClick={() => {
+                navigate('/dashboard/valuebrands');
+              }}
+            >
               Collect Now
             </Button>
           </Grid>
