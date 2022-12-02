@@ -13,6 +13,7 @@ import GoldCoins from './pages/GoldCoins';
 import RevenueStore from './pages/RevenueStore';
 import ValueBrand from './pages/ValueBrand';
 import RegisterPage from './pages/RegisterPage';
+import ValueExpenseTable from './Reusable/Table/ValueExpenseTable';
 
 // ----------------------------------------------------------------------
 
@@ -41,6 +42,7 @@ export default function Router() {
         // { path: 'revenue-store', element: <RevenueStore /> },
         { path: 'value', element: <UserPage /> },
         { path: 'valuebrands', element: <ValueBrand /> },
+        { path: 'valueexpenses', element: <ValueExpenseTable /> },
       ],
     },
 

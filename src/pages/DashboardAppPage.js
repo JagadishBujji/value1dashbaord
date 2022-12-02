@@ -98,8 +98,7 @@ export default function DashboardAppPage() {
             />
           </Grid>
         </Grid>
-
-        <Typography variant="h4" sx={{ mb: 5, color: '#ccc' }} id="revenue-store">
+        <Typography variant="h4" sx={{ mb: 3, color: '#ccc' }} id="revenue-store">
           Revenue Store
         </Typography>
         <Grid container spacing={3}>
@@ -275,7 +274,9 @@ export default function DashboardAppPage() {
               color="warning"
               icon={'ant-design:windows-filled'}
             />
-            <Button variant="contained" className="ValueCardBtn" sx={collectBtn}>
+            <Button variant="contained" className="ValueCardBtn" sx={collectBtn} onClick={() => {
+              navigate('/dashboard/valueexpenses');
+            }}>
               Collect Now
             </Button>
           </Grid>

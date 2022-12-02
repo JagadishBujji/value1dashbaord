@@ -34,7 +34,7 @@ const navConfig = [
 
   {
     title: 'Value Store',
-    path: '/dashboard/value',
+    path: '/dashboard/app/#value-store',
     icon: icon('ic_user'),
   },
 ];
