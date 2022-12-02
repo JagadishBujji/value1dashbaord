@@ -41,7 +41,7 @@ export default function MyCoOwning() {
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <NavLink to="/faq">
+            <NavLink style={{ textDecoration: 'none' }} to="/faq">
               <AppWidgetSummary
                 sx={{ background: '#DFCA77', color: '#000', height: '100%' }}
                 title="Grant Letter"
