@@ -4,6 +4,9 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Dropdown from '../Dropdown/Dropdown';
+import UploadFile from '../Upload/UploadFile';
+
+
 
 const style = {
   position: 'absolute',
@@ -44,6 +47,7 @@ const button = {
 };
 
 export default function AddNewModal({ isOpen, handleClose, submitHandler, isButtonDisabled }) {
+  
   return (
     <div>
       {/* <Button onClick={handleOpen}>Add New</Button>  */}
@@ -66,7 +70,7 @@ export default function AddNewModal({ isOpen, handleClose, submitHandler, isButt
           </Typography>
           <Dropdown value1="Organ" value2="Blood" value3="others" title="Good Deed Type" />
           <Dropdown value1="Pledge" value2="Action" title="Type" />
-          <Dropdown value1="Complete" value2="Incomplete" title="Status" />
+          <UploadFile />
           <div className="row FormBtn">
             <Button variant="contained" sx={save} onClick={submitHandler} disabled={isButtonDisabled}>
               {isButtonDisabled ? "Loading..." : 'Submit'}

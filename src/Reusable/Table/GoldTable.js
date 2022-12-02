@@ -9,14 +9,14 @@ const columns = [
     field: 'age',
     headerName: 'Age',
     type: 'number',
-    width: 150,
+    width: 100,
   },
   {
     field: 'fullName',
     headerName: 'Full name',
     description: 'This column has a value getter and is not sortable.',
     sortable: false,
-    width: 250,
+    width: 200,
     valueGetter: (params) =>
       `${params.row.firstName || ''} ${params.row.lastName || ''}`,
   },
@@ -43,7 +43,7 @@ export default function GoldTable() {
         pageSize={5}
         rowsPerPageOptions={[5]}
         checkboxSelection
-        sx={{color: "#ccc", mt: 5, background: "#191921", border: "none", textAlign: "left"}}
+        sx={{color: "#ccc", mt: 5, background: "#191921", border: "none", textAlign: "center"}}
       />
     </div>
   );
