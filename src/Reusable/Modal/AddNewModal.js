@@ -43,21 +43,17 @@ const button = {
   },
 };
 
-export default function AddNewModal() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+export default function AddNewModal({ isOpen, handleClose, submitHandler, isButtonDisabled }) {
   return (
     <div>
       {/* <Button onClick={handleOpen}>Add New</Button>  */}
 
-      <Button sx={button} onClick={handleOpen}>
+      {/* <Button sx={button} onClick={handleOpen}>
         Add New
-      </Button>
+      </Button> */}
 
       <Modal
-        open={open}
+        open={isOpen}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -72,8 +68,8 @@ export default function AddNewModal() {
           <Dropdown value1="Pledge" value2="Action" title="Type" />
           <Dropdown value1="Complete" value2="Incomplete" title="Status" />
           <div className="row FormBtn">
-            <Button variant="contained" sx={save} onClick={handleClose}>
-              Submit
+            <Button variant="contained" sx={save} onClick={submitHandler} disabled={isButtonDisabled}>
+              {isButtonDisabled ? "Loading..." : 'Submit'}
             </Button>
             <Button variant="outlined" sx={cancel} onClick={handleClose}>
               Cancel

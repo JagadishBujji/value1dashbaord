@@ -11,6 +11,7 @@ import MyCoOwning from './pages/MyCoOwning';
 import DashboardAppPage from './pages/DashboardAppPage';
 import GoldCoins from './pages/GoldCoins';
 import RevenueStore from './pages/RevenueStore';
+import ValueBrand from './pages/ValueBrand';
 
 // ----------------------------------------------------------------------
 
@@ -25,8 +26,9 @@ export default function Router() {
         { path: 'myco-owning', element: <MyCoOwning /> },
         { path: 'my-value-coins', element: <ValueCoins /> },
         { path: 'my-gold-coins', element: <GoldCoins /> },
-        { path: 'revenue-store', element: <RevenueStore /> },
+        // { path: 'revenue-store', element: <RevenueStore /> },
         { path: 'value', element: <UserPage /> },
+        { path: 'valuebrands', element: <ValueBrand /> },
       ],
     },
     {

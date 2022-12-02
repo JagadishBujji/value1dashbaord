@@ -28,7 +28,7 @@ const navConfig = [
   },
   {
     title: 'Revenue Store',
-    path: '/dashboard/revenue-store',
+    path: '/dashboard/app/#revenue-store',
     icon: icon('ic_cart'),
   },
 

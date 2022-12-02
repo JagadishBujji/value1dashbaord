@@ -1,12 +1,15 @@
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-// import Button from '@mui/material/Button';
+import Button from '@mui/material/Button';
 // import { faker } from '@faker-js/faker';
 // @mui
+import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
-import { Grid, Container, Typography, Box} from '@mui/material';
+import { Grid, Container, Typography, Box } from '@mui/material';
 // components
 // import Iconify from '../components/iconify';
 // sections
+import AddNewModal from '../Reusable/Modal/AddNewModal';
 import { AppWidgetSummary } from '../sections/@dashboard/app';
 // import { before } from 'lodash';
 
@@ -14,11 +17,24 @@ import { AppWidgetSummary } from '../sections/@dashboard/app';
 
 export default function DashboardAppPage() {
   const theme = useTheme();
+  const navigate = useNavigate();
+
+  const [goodDeedsModal, setGoodDeedsModal] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const explore = {
     position: 'relative',
   };
-
+  const collectBtn = {
+    bgcolor: '#000',
+    color: '#fff',
+    boxShadow: 'none',
+    mt: 2,
+    '&:hover': {
+      bgcolor: '#000',
+      color: '#fff',
+    },
+  };
   return (
     <>
       <Helmet>
@@ -77,7 +93,7 @@ export default function DashboardAppPage() {
           </Grid>
         </Grid>
 
-        <Typography variant="h4" sx={{ mb: 5, color: '#ccc' }}>
+        <Typography variant="h4" sx={{ mb: 5, color: '#ccc' }} id="revenue-store">
           Revenue Store
         </Typography>
         <Grid container spacing={3}>
@@ -189,11 +205,11 @@ export default function DashboardAppPage() {
             />
           </Grid> */}
         </Grid>
-        <Typography variant="h4" sx={{ mb: 5, mt: 5, color: '#ccc' }}>
+        <Typography variant="h4" sx={{ mb: 5, mt: 5, color: '#ccc' }} id="value-store">
           Value Store
         </Typography>
 
-        <Grid container spacing={3} sx={{ mb: 2 }}>
+        <Grid container spacing={3} sx={{ mb: 2 }} className="ValueCard">
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary
               sx={{ background: '#DFCA77', color: '#000' }}
@@ -201,9 +217,31 @@ export default function DashboardAppPage() {
               total={714000}
               icon={'ant-design:android-filled'}
             />
+            <Button
+              variant="contained"
+              className="ValueCardBtn"
+              sx={collectBtn}
+              onClick={() => setGoodDeedsModal(true)}
+            >
+              Collect Now
+            </Button>
+            <AddNewModal
+              isOpen={goodDeedsModal}
+              isButtonDisabled={isButtonDisabled}
+              handleClose={() => setGoodDeedsModal(false)}
+              submitHandler={() => {
+                console.log('Storing data in db...');
+                setIsButtonDisabled(true);
+                setTimeout(() => {
+                  setIsButtonDisabled(false);
+                  setGoodDeedsModal(false);
+                }, 5000);
+                navigate('/dashboard/value');
+              }}
+            />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} sm={6} md={3} className="ValueCard">
             <AppWidgetSummary
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Value Brands"
@@ -211,9 +249,14 @@ export default function DashboardAppPage() {
               color="info"
               icon={'ant-design:apple-filled'}
             />
+            <Button variant="contained" className="ValueCardBtn" sx={collectBtn} onClick={() => {
+              navigate('/dashboard/valuebrands');
+            }}>
+              Collect Now
+            </Button>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} sm={6} md={3} className="ValueCard">
             <AppWidgetSummary
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Value Expenses"
@@ -221,6 +264,9 @@ export default function DashboardAppPage() {
               color="warning"
               icon={'ant-design:windows-filled'}
             />
+            <Button variant="contained" className="ValueCardBtn" sx={collectBtn}>
+              Collect Now
+            </Button>
           </Grid>
 
           {/* <Grid item xs={12} sm={6} md={3}>
