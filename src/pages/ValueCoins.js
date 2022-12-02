@@ -42,7 +42,7 @@ export default function ValueCoins() {
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Value Coins"
               total={500}
-              icon={'ant-design:android-filled'}
+              icon={'ph:coin-vertical-fill'}
             />
           </Grid>
         </Grid>
