@@ -33,6 +33,9 @@ export default function AccountPopover() {
 
   const handleClose = () => {
     setOpen(null);
+    console.log("hello")
+    localStorage.removeItem("user");
+    window.location.reload();
   };
 
   return (

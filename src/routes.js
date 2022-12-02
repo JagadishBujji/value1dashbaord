@@ -17,19 +17,21 @@ import RegisterPage from './pages/RegisterPage';
 // ----------------------------------------------------------------------
 
 export default function Router() {
+  const user=JSON.parse(localStorage.getItem("user"));
   const routes = useRoutes([
     {
       path: '/login',
-      element: <LoginPage />,
+      element: user ? <Navigate to="/dashboard" /> : <LoginPage />,
+
     },
     {
       path: '/register',
-      element: <RegisterPage />,
+      element: user? <Navigate to="/dashboard"/> : <RegisterPage/>
     },
 
     {
       path: '/dashboard',
-      element: <DashboardLayout />,
+      element: user?  <DashboardLayout /> : <LoginPage/>,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
@@ -43,7 +45,7 @@ export default function Router() {
     },
 
     {
-      element: <SimpleLayout />,
+      element:user? <SimpleLayout /> : <LoginPage/>,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
         // { path: '404', element: <Page404 /> },
