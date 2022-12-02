@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import CongratulationModal from "../Reusable/Modal/CongratulationModal";
 import "../style.css"
 
 const LoginPage = () => {
@@ -49,6 +50,7 @@ const LoginPage = () => {
                 <button type="submit" onClick={loginHandler}>
                   Login
                 </button>
+                {/* <CongratulationModal/> */}
               </div>
               <span className="remember">
                 {" "}
