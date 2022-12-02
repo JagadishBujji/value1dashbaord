@@ -12,11 +12,21 @@ import DashboardAppPage from './pages/DashboardAppPage';
 import GoldCoins from './pages/GoldCoins';
 import RevenueStore from './pages/RevenueStore';
 import ValueBrand from './pages/ValueBrand';
+import RegisterPage from './pages/RegisterPage';
 
 // ----------------------------------------------------------------------
 
 export default function Router() {
   const routes = useRoutes([
+    {
+      path: '/login',
+      element: <LoginPage />,
+    },
+    {
+      path: '/register',
+      element: <RegisterPage />,
+    },
+
     {
       path: '/dashboard',
       element: <DashboardLayout />,
@@ -31,10 +41,7 @@ export default function Router() {
         { path: 'valuebrands', element: <ValueBrand /> },
       ],
     },
-    {
-      path: 'login',
-      element: <LoginPage />,
-    },
+
     {
       element: <SimpleLayout />,
       children: [

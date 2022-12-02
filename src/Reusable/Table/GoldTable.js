@@ -34,7 +34,7 @@ const rows = [
   { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
 
-export default function ValueTable() {
+export default function GoldTable() {
   return (
     <div style={{ height: 400, width: '100%' }}>
       <DataGrid
@@ -43,7 +43,7 @@ export default function ValueTable() {
         pageSize={5}
         rowsPerPageOptions={[5]}
         checkboxSelection
-        sx={{color: "#ccc", mt: 5, background: "#191921", border: "none"}}
+        sx={{color: "#ccc", mt: 5, background: "#191921", border: "none", textAlign: "left"}}
       />
     </div>
   );
