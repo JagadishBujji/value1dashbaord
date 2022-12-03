@@ -1,5 +1,6 @@
 const express=require('express')
 const app=express();
+const path = require("path");
 const cors=require('cors')
 const bodyParser=require('body-parser')
 const router=require('./routes/router')
@@ -18,7 +19,7 @@ app.listen(5000,()=>{
 })
 
 app.get("/*", function (req, res) {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
+    res.sendFile(path.join(__dirname, "../build", "index.html"));
   });
-  
+
 app.use(router)
