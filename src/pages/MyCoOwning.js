@@ -1,9 +1,6 @@
-import { NavLink } from 'react-router-dom';
-
-import { Helmet } from 'react-helmet-async';
-import { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 // @mui
+import { NavHashLink } from 'react-router-hash-link';
 import { Grid, Container, Typography, Link } from '@mui/material';
 import Card from '@mui/material/Card';
 import { AppWidgetSummary } from '../sections/@dashboard/app';
@@ -41,14 +38,17 @@ export default function MyCoOwning() {
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <NavLink style={{ textDecoration: 'none' }} to="/faq">
+          <NavHashLink
+              to="/https://sign.zoho.in/signform?form_link=234b4d535f495623d581afcbe80394dd7569e4eccdb8f46ef67b8a076cda5da89430f4e18275b839fcec1ef5b029654f4acaf8d45092525aad60e51ff8c09faa75069ac6e9e1bf2f#"
+              style={{ textDecoration: 'none' }}
+            >
               <AppWidgetSummary
                 sx={{ background: '#DFCA77', color: '#000', height: '100%' }}
                 title="Grant Letter"
                 // total={"abc1234678"}
                 icon={'ant-design:android-filled'}
               />
-            </NavLink>
+            </NavHashLink>
           </Grid>
         </Grid>
         <Card sx={{ width: '100%', bgcolor: '#191921' }}>

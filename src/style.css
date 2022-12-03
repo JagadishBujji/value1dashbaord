@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+}
 .css-1byr0t {
   background: #111116;
 }
@@ -53,7 +56,7 @@
   left: 23px;
   right: 0;
   height: 86%;
-  width: 91%;
+  width: 95%;
   opacity: 0;
   border-radius: 10px;
   transition: 0.5s ease;
@@ -113,15 +116,14 @@
 }
 .ValueCardBtn{
   position: absolute;
- bottom: 2px;
- left:77px
+  left:77px;
+  top: 205px;
 }
-
 
 .loginform {
   display: flex;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   align-items: center;
   height: 100vh;
   overflow: auto;
@@ -130,7 +132,7 @@
 .registerform {
   display: flex;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   align-items: center;
   /* height: 100vh; */
   overflow: auto;
@@ -229,10 +231,7 @@ form {
   text-align: center;
 }
 
-* {
-  font-family: 'Varela Round', sans-serif;
-  /* color: #111116; */
-}
+
 
 .ac a {
   text-decoration: underline;
@@ -330,5 +329,34 @@ form {
   }
   .container h2 span {
     font-size: medium;
+  }
+  overlay {
+    position: absolute;
+    top: 24px;
+    bottom: 0;
+    left: 23px;
+    right: 0;
+    height: 86%;
+    width: 91%;
+    opacity: 0;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    background-color: #19192197;
+  }
+  .ValueCard{
+    position: relative;
+    width:100%;
+    height: 100%;
+  }
+  
+  .ValueCardBtn {
+    position: absolute;
+    top: 192px;
+    left: 149px;
+}
+
+/* modal */
+  .css-1yd8pjp{
+    width:95% ;
   }
 }

@@ -5,8 +5,8 @@ const columns = [
   { field: 'id', headerName: 'ID', width: 100 },
  
   {
-    field: 'eduvationalexpenses',
-    headerName: 'Eduvational Expenses',
+    field: 'educationalexpenses',
+    headerName: 'Educational Expenses',
     type: 'number',
     width: 180,
   },
@@ -14,15 +14,15 @@ const columns = [
 ];
 
 const rows = [
-  { id: 1,  eduvationalexpenses: 3500 },
-  { id: 2,  eduvationalexpenses: 4200 },
-  { id: 3,  eduvationalexpenses: 4500 },
-  { id: 4,  eduvationalexpenses: 1600 },
-  { id: 5,  eduvationalexpenses: 20000 },
-  { id: 6,  eduvationalexpenses: 1500 },
-  { id: 7,  eduvationalexpenses: 4400 },
-  { id: 8, eduvationalexpenses: 3600 },
-  { id: 9,  eduvationalexpenses: 6500 },
+  { id: 1,  educationalexpenses: 3500 },
+  { id: 2,  educationalexpenses: 4200 },
+  { id: 3,  educationalexpenses: 4500 },
+  { id: 4,  educationalexpenses: 1600 },
+  { id: 5,  educationalexpenses: 20000 },
+  { id: 6,  educationalexpenses: 1500 },
+  { id: 7,  educationalexpenses: 4400 },
+  { id: 8, educationalexpenses: 3600 },
+  { id: 9,  educationalexpenses: 6500 },
 ];
 
 export default function ValueExpenseTable() {
