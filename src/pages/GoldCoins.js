@@ -44,7 +44,7 @@ export default function GoldCoins() {
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Gold Coins"
               total={500}
-              icon={'ant-design:android-filled'}
+              icon={'ri:coins-fill'}
             />
           </Grid>
         </Grid>

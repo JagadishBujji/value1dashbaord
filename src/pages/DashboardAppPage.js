@@ -60,8 +60,8 @@ export default function DashboardAppPage() {
               <AppWidgetSummary
                 sx={{ background: '#DFCA77', color: '#000' }}
                 title="My Value Coins"
-                total={550000}
-                icon={'ant-design:android-filled'}
+                total={500}
+                icon={'ph:coin-vertical-fill'}
               />
             </Link>
           </Grid>
@@ -71,9 +71,9 @@ export default function DashboardAppPage() {
               <AppWidgetSummary
                 sx={{ background: '#DFCA77', color: '#000' }}
                 title="My Gold Coins"
-                total={1352831}
+                total={500}
                 color="info"
-                icon={'ant-design:apple-filled'}
+                icon={'ri:coins-fill'}
               />
             </Link>
           </Grid>
@@ -82,9 +82,9 @@ export default function DashboardAppPage() {
             <AppWidgetSummary
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Today's Gold Rate"
-              total={1723315}
+              total={500}
               color="warning"
-              icon={'ant-design:windows-filled'}
+              icon={'tabler:coin-rupee'}
             />
           </Grid>
 
@@ -94,7 +94,7 @@ export default function DashboardAppPage() {
               title="Human Development Index"
               total={234}
               color="error"
-              icon={'ant-design:bug-filled'}
+              icon={'mdi:human-greeting-variant'}
             />
           </Grid>
         </Grid>
@@ -220,7 +220,7 @@ export default function DashboardAppPage() {
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Good Deeds"
               total={714000}
-              icon={'ant-design:android-filled'}
+              icon={'ic:round-gpp-good'}
             />
             <Button
               variant="contained"
@@ -252,7 +252,7 @@ export default function DashboardAppPage() {
               title="Value Brands"
               total={1352831}
               color="info"
-              icon={'ant-design:apple-filled'}
+              icon={'tabler:brand-booking'}
             />
             <Button
               variant="contained"
@@ -272,11 +272,16 @@ export default function DashboardAppPage() {
               title="Value Expenses"
               total={1723315}
               color="warning"
-              icon={'ant-design:windows-filled'}
+              icon={'ic:round-currency-exchange'}
             />
-            <Button variant="contained" className="ValueCardBtn" sx={collectBtn} onClick={() => {
-              navigate('/dashboard/valueexpenses');
-            }}>
+            <Button
+              variant="contained"
+              className="ValueCardBtn"
+              sx={collectBtn}
+              onClick={() => {
+                navigate('/dashboard/valueexpenses');
+              }}
+            >
               Collect Now
             </Button>
           </Grid>

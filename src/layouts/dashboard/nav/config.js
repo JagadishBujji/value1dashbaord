@@ -14,7 +14,7 @@ const navConfig = [
   {
     title: 'My Co-Owning Journey',
     path: '/dashboard/myco-owning',
-    icon: icon('ic_cart'),
+    icon: icon('ui-user-profile'),
   },
   {
     title: 'My Value Coins',
@@ -24,7 +24,7 @@ const navConfig = [
   {
     title: 'My Gold Coins',
     path: '/dashboard/my-gold-coins',
-    icon: icon('ic_lock'),
+    icon: icon('coins-fill'),
   },
   {
     title: 'Revenue Store',
@@ -35,7 +35,7 @@ const navConfig = [
   {
     title: 'Value Store',
     path: '/dashboard/app/#value-store',
-    icon: icon('ic_user'),
+    icon: icon('store'),
   },
 ];
 
