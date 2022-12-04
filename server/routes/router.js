@@ -2,8 +2,6 @@ const express=require('express');
 const pool = require('../database');
 const router=express.Router();
 
-
-
 router.post("/registerUser",(req,res)=>{
     console.log(req.body) 
     pool.connect()
