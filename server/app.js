@@ -18,10 +18,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "../build")));
 app.use(router);
 
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../build', 'index.html'));
-});
-
 app.listen(5000, () => {
   console.log('listening post 5000');
 });
