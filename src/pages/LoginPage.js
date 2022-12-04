@@ -28,7 +28,7 @@ const LoginPage = () => {
     console.log(phoneNumber)
     setIsPending(true) 
 
-    await axios.get(`http://localhost:5000/checkRegistered/${nm}`)
+    await axios.get(`http://13.233.195.184/checkRegistered/${nm}`)
     .then((res)=>{
       if(res.data.success)
       {

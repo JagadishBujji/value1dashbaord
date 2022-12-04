@@ -1,6 +1,7 @@
 const express=require('express');
 const pool = require('../database');
 const router=express.Router();
+const path = require('path');
 
 router.post("/registerUser",(req,res)=>{
     console.log(req.body) 
