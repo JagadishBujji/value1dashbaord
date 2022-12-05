@@ -41,8 +41,9 @@ export default function ValueCoins() {
             <AppWidgetSummary
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Value Coins"
+              type="img"
               total={500}
-              icon={'ph:coin-vertical-fill'}
+              icon={'icon_value'}
             />
           </Grid>
         </Grid>

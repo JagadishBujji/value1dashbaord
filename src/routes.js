@@ -48,7 +48,8 @@ export default function Router() {
     },
 
     {
-      element: user ? <SimpleLayout /> : <LoginPage />,
+      element: <SimpleLayout />,
+      //  user ? <SimpleLayout /> : <LoginPage />,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
         // { path: '404', element: <Page404 /> },

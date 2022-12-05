@@ -32,7 +32,7 @@ ValueStoreWidget.propTypes = {
   sx: PropTypes.object,
 };
 
-export default function ValueStoreWidget({ title, total, icon, color = 'primary', sx, ...other },props) {
+export default function ValueStoreWidget({ heading, title, total, icon, color = 'primary', sx, ...other }) {
   
   const button = {
     background: '#000',
@@ -74,8 +74,8 @@ export default function ValueStoreWidget({ title, total, icon, color = 'primary'
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
         {title}
       </Typography>
-      <Button sx={button} variant="contained" href="#contained-buttons">
-        Collect Now
+      <Button sx={button} variant="contained">
+        {heading}
       </Button>
     </Card>
   );
