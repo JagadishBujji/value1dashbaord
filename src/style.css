@@ -269,6 +269,42 @@ form {
 .social-mediaImg {
   width: 48px;
 }
+/* slider */
+.slidemain {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.scroller {
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+  font-size: 40px;
+  text-align: center;
+}
+.scroller > span {
+  position: absolute;
+  top: 0;
+  left:0;
+  animation: slide 6s infinite;
+  font-weight: bold;
+  color: #DFCA77;
+}
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.2em;
+  }
+  50% {
+    top: -2.4em;
+  }
+  75% {
+    top: -3.6em;
+  }
+}
 
 @media only screen and (max-width: 500px) {
   .container-wrapper {

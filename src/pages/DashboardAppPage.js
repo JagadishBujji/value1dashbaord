@@ -13,7 +13,7 @@ import { Grid, Container, Typography, Box } from '@mui/material';
 import AddNewModal from '../Reusable/Modal/AddNewModal';
 import { AppWidgetSummary } from '../sections/@dashboard/app';
 import ValueStoreWidget from '../sections/@dashboard/app/ValueStoreWidget';
-
+import SliderMain from '../components/slider/SliderMain';
 // import { before } from 'lodash';
 
 // ----------------------------------------------------------------------
@@ -49,11 +49,18 @@ export default function DashboardAppPage() {
           Hi, Value1
         </Typography> */}
 
-        <Box
+        {/* <Box
           component="img"
           src="../../banner1.png"
           sx={{ width: '100%', height: '60vh', mb: 2, borderRadius: '10px' }}
-        />
+        /> */}
+        <div>
+          <Typography variant="h4" sx={{ m: 5, color: "#ccc" }}>
+          Earn 24k 999 Gold<br />
+          On Your Every
+        </Typography> 
+        <SliderMain />
+        </div>
 
         <Grid container spacing={3} sx={{ mb: 5 }}>
           <Grid item xs={12} sm={6} md={3}>
