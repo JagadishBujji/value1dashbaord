@@ -61,6 +61,7 @@ export default function DashboardAppPage() {
               <AppWidgetSummary
                 sx={{ background: '#DFCA77', color: '#000' }}
                 title="My Value Coins"
+                type="img"
                 total={500}
                 icon={'icon_value'}
               />

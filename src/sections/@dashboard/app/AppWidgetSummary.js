@@ -6,6 +6,7 @@ import { Card, Typography } from '@mui/material';
 import { fShortenNumber } from '../../../utils/formatNumber';
 // components
 import Iconify from '../../../components/iconify';
+import SvgColor from '../../../components/svg-color';
 
 // ----------------------------------------------------------------------
 
@@ -53,7 +54,11 @@ export default function AppWidgetSummary({ title, total, icon, color = 'primary'
             )} 100%)`,
         }}
       >
-        <Iconify sx={{ color: '#000' }} icon={icon} width={24} height={24} />
+        {other.type === 'img' ? (
+          <img src={`/assets/icons/navbar/${icon}.svg`} alt="My Value Coins" />
+        ) : (
+          <Iconify sx={{ color: '#000' }} icon={icon} width={24} height={24} />
+        )}
       </StyledIcon>
 
       <Typography variant="h3">{fShortenNumber(total)}</Typography>
@@ -61,7 +66,6 @@ export default function AppWidgetSummary({ title, total, icon, color = 'primary'
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
         {title}
       </Typography>
-
     </Card>
   );
 }
