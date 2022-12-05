@@ -62,7 +62,7 @@ export default function DashboardAppPage() {
                 sx={{ background: '#DFCA77', color: '#000' }}
                 title="My Value Coins"
                 total={500}
-                icon={'ph:coin-vertical-fill'}
+                icon={'icon_value'}
               />
             </Link>
           </Grid>
@@ -215,7 +215,7 @@ export default function DashboardAppPage() {
           Value Store
         </Typography>
 
-        <Grid container spacing={3} sx={{ mb: 2 }} >
+        <Grid container spacing={3} sx={{ mb: 2 }}>
           <Grid item xs={12} sm={6} md={3}>
             <ValueStoreWidget
               sx={{ background: '#DFCA77', color: '#000' }}
@@ -223,6 +223,7 @@ export default function DashboardAppPage() {
               total={714000}
               icon={'ic:round-gpp-good'}
               onClick={() => setGoodDeedsModal(true)}
+              heading="Collect Now"
             />
             {/* <Button
               variant="contained"
@@ -248,13 +249,14 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3} >
+          <Grid item xs={12} sm={6} md={3}>
             <ValueStoreWidget
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Value Brands"
               total={1352831}
               color="info"
               icon={'tabler:brand-booking'}
+              heading="Collect Now"
               onClick={() => {
                 navigate('/dashboard/valuebrands');
               }}
@@ -271,13 +273,14 @@ export default function DashboardAppPage() {
             </Button> */}
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3} >
+          <Grid item xs={12} sm={6} md={3}>
             <ValueStoreWidget
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Value Expenses"
               total={1723315}
               color="warning"
               icon={'ic:round-currency-exchange'}
+              heading="Collect Now"
               onClick={() => {
                 navigate('/dashboard/valueexpenses');
               }}

@@ -1,9 +1,11 @@
 import Avatar from '@mui/material/Avatar';
+import { NavLink } from 'react-router-dom';
 // @mui
-import { NavHashLink } from 'react-router-hash-link';
+// import { NavLink } from 'react-router-hash-link';
 import { Grid, Container, Typography, Link } from '@mui/material';
 import Card from '@mui/material/Card';
 import { AppWidgetSummary } from '../sections/@dashboard/app';
+import ValueStoreWidget from '../sections/@dashboard/app/ValueStoreWidget';
 
 // ----------------------------------------------------------------------
 
@@ -34,21 +36,24 @@ export default function MyCoOwning() {
               sx={{ background: '#DFCA77', color: '#000' }}
               title="MemberShip Id"
               total={123}
-              icon={'ant-design:android-filled'}
+              icon={'fa6-solid:id-badge'}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-          <NavHashLink
-              to="/https://sign.zoho.in/signform?form_link=234b4d535f495623d581afcbe80394dd7569e4eccdb8f46ef67b8a076cda5da89430f4e18275b839fcec1ef5b029654f4acaf8d45092525aad60e51ff8c09faa75069ac6e9e1bf2f#"
+            <a
+              href="https://sign.zoho.in/signform?form_link=234b4d535f495623d581afcbe80394dd7569e4eccdb8f46ef67b8a076cda5da89430f4e18275b839fcec1ef5b029654f4acaf8d45092525aad60e51ff8c09faa75069ac6e9e1bf2f#"
               style={{ textDecoration: 'none' }}
+              target="_blank"
+              rel="noreferrer"
             >
               <AppWidgetSummary
                 sx={{ background: '#DFCA77', color: '#000', height: '100%' }}
                 title="Grant Letter"
                 // total={"abc1234678"}
-                icon={'ant-design:android-filled'}
+                icon={'mdi:post-outline'}
               />
-            </NavHashLink>
+            
+            </a>
           </Grid>
         </Grid>
         <Card sx={{ width: '100%', bgcolor: '#191921' }}>
