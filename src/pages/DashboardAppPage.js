@@ -134,7 +134,7 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} sm={6} md={3} className="explore">
             <img
-              src="../../travel.jpg"
+              src="../../gold.jpg"
               alt=""
               width={200}
               height={150}
@@ -142,13 +142,13 @@ export default function DashboardAppPage() {
               className="explore-image"
             />
             <div className="overlay">
-              <div className="text">Travels</div>
+              <div className="text">Travel</div>
             </div>
           </Grid>
 
           <Grid item xs={12} sm={6} md={3} className="explore">
             <img
-              src="../../deal.jpg"
+              src="../../gold.jpg"
               alt=""
               width={200}
               height={150}
@@ -156,13 +156,13 @@ export default function DashboardAppPage() {
               className="explore-image"
             />
             <div className="overlay">
-              <div className="text">Online Deals</div>
+              <div className="text">Deals</div>
             </div>
           </Grid>
 
           <Grid item xs={12} sm={6} md={3} className="explore">
             <img
-              src="../../loan.jpg"
+              src="../../gold.jpg"
               alt=""
               width={200}
               height={150}
@@ -175,7 +175,7 @@ export default function DashboardAppPage() {
           </Grid>
           <Grid item xs={12} sm={6} md={3} className="explore">
             <img
-              src="../../stock.jpg"
+              src="../../gold.jpg"
               alt=""
               width={200}
               height={150}
@@ -183,13 +183,13 @@ export default function DashboardAppPage() {
               className="explore-image"
             />
             <div className="overlay">
-              <div className="text">Stocks & Capital Market</div>
+              <div className="text">Stocks</div>
             </div>
           </Grid>
 
           <Grid item xs={12} sm={6} md={3} className="explore">
             <img
-              src="../../billPayment.jpg"
+              src="../../gold.jpg"
               alt=""
               width={200}
               height={150}
@@ -197,13 +197,13 @@ export default function DashboardAppPage() {
               className="explore-image"
             />
             <div className="overlay">
-              <div className="text">Bill Payment with icons</div>
+              <div className="text">Bill Payment</div>
             </div>
           </Grid>
 
           <Grid item xs={12} sm={6} md={3} className="explore">
             <img
-              src="../../admission.jpg"
+              src="../../gold.jpg"
               alt=""
               width={200}
               height={150}

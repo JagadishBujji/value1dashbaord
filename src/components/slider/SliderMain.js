@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
  const SliderMain = () =>{
-  const [words, setWords] =  useState (["Air Ticket", "Bus Ticket", "Hotel Booking", "Online Shopping","Stock Trading","Other Expenses"]);
+  const [words, setWords] =  useState (["Air Ticket", "Bus Ticket", "Hotel Booking", "Online Shopping","Stock Trading","Other Expenses..."]);
   return (
     <div className="slidemain">
       <div className="scroller">
