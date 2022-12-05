@@ -18,21 +18,22 @@ import ValueExpenseTable from './Reusable/Table/ValueExpenseTable';
 // ----------------------------------------------------------------------
 
 export default function Router() {
-  const user=JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem('user'));
   const routes = useRoutes([
-    {
-      path: '/login',
-      element: user ? <Navigate to="/dashboard" /> : <LoginPage />,
+    // {
+    //   path: '/login',
+    //   element: user ? <Navigate to="/dashboard" /> : <LoginPage />,
 
-    },
-    {
-      path: '/register',
-      element: user? <Navigate to="/dashboard"/> : <RegisterPage/>
-    },
+    // },
+    // {
+    //   path: '/register',
+    //   element: user? <Navigate to="/dashboard"/> : <RegisterPage/>
+    // },
 
     {
       path: '/dashboard',
-      element: user?  <DashboardLayout /> : <LoginPage/>,
+      element: <DashboardLayout />,
+      // user?  <DashboardLayout /> : <LoginPage/>,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
@@ -47,7 +48,7 @@ export default function Router() {
     },
 
     {
-      element:user? <SimpleLayout /> : <LoginPage/>,
+      element: user ? <SimpleLayout /> : <LoginPage />,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
         // { path: '404', element: <Page404 /> },

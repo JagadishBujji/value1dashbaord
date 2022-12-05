@@ -12,6 +12,7 @@ import { Grid, Container, Typography, Box } from '@mui/material';
 // sections
 import AddNewModal from '../Reusable/Modal/AddNewModal';
 import { AppWidgetSummary } from '../sections/@dashboard/app';
+import ValueStoreWidget from '../sections/@dashboard/app/ValueStoreWidget';
 
 // import { before } from 'lodash';
 
@@ -214,22 +215,23 @@ export default function DashboardAppPage() {
           Value Store
         </Typography>
 
-        <Grid container spacing={3} sx={{ mb: 2 }} className="ValueCard">
+        <Grid container spacing={3} sx={{ mb: 2 }} >
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary
+            <ValueStoreWidget
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Good Deeds"
               total={714000}
               icon={'ic:round-gpp-good'}
+              onClick={() => setGoodDeedsModal(true)}
             />
-            <Button
+            {/* <Button
               variant="contained"
               className="ValueCardBtn"
               sx={collectBtn}
               onClick={() => setGoodDeedsModal(true)}
             >
               Collect Now
-            </Button>
+            </Button> */}
             <AddNewModal
               isOpen={goodDeedsModal}
               isButtonDisabled={isButtonDisabled}
@@ -246,15 +248,18 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3} className="ValueCard">
-            <AppWidgetSummary
+          <Grid item xs={12} sm={6} md={3} >
+            <ValueStoreWidget
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Value Brands"
               total={1352831}
               color="info"
               icon={'tabler:brand-booking'}
+              onClick={() => {
+                navigate('/dashboard/valuebrands');
+              }}
             />
-            <Button
+            {/* <Button
               variant="contained"
               className="ValueCardBtn"
               sx={collectBtn}
@@ -263,18 +268,21 @@ export default function DashboardAppPage() {
               }}
             >
               Collect Now
-            </Button>
+            </Button> */}
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3} className="ValueCard">
-            <AppWidgetSummary
+          <Grid item xs={12} sm={6} md={3} >
+            <ValueStoreWidget
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Value Expenses"
               total={1723315}
               color="warning"
               icon={'ic:round-currency-exchange'}
+              onClick={() => {
+                navigate('/dashboard/valueexpenses');
+              }}
             />
-            <Button
+            {/* <Button
               variant="contained"
               className="ValueCardBtn"
               sx={collectBtn}
@@ -283,7 +291,7 @@ export default function DashboardAppPage() {
               }}
             >
               Collect Now
-            </Button>
+            </Button> */}
           </Grid>
 
           {/* <Grid item xs={12} sm={6} md={3}>

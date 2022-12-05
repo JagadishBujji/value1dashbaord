@@ -27,7 +27,7 @@ const rows = [
 
 export default function ValueExpenseTable() {
   return (
-    <div style={{ height: 450, width: '80%' }}>
+    <div style={{ height: 450, width: '80%', margin: "auto" }}>
       <DataGrid
         rows={rows}
         columns={columns}
