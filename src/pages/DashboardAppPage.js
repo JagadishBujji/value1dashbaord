@@ -54,13 +54,20 @@ export default function DashboardAppPage() {
           src="../../banner1.png"
           sx={{ width: '100%', height: '60vh', mb: 2, borderRadius: '10px' }}
         /> */}
-        <div>
-          <Typography variant="h4" sx={{ m: 5, color: "#ccc" }}>
-          Earn 24k 999 Gold<br />
-          On Your Every
-        </Typography> 
-        <SliderMain />
-        </div>
+        <Grid className="banner" container spacing={3} sx={{ mb: 5 }}>
+          <Grid item xs={12} sm={6} md={6}>
+            <Typography variant="h2" sx={{ m: 5, color: '#ccc' }}>
+              Earn <span className='contentspan'>24k 999 Gold</span>
+              <br />
+              On Your Every
+              <br />
+              <SliderMain />
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6} className="bannerimg">
+            <img src="../../bannergirl.png" alt="" className="bannergirl" />
+          </Grid>
+        </Grid>
 
         <Grid container spacing={3} sx={{ mb: 5 }}>
           <Grid item xs={12} sm={6} md={3}>

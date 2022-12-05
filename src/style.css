@@ -1,6 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-*{
+* {
   font-family: 'Poppins', sans-serif;
 }
 .css-1byr0t {
@@ -15,17 +14,17 @@
   width: 100%;
 }
 
-.css-vluhx3-MuiPaper-root-MuiCard-root{
+.css-vluhx3-MuiPaper-root-MuiCard-root {
   background-color: #111116;
 }
 
-.css-1wzzcsg-MuiGrid-root>.MuiGrid-item{
+.css-1wzzcsg-MuiGrid-root > .MuiGrid-item {
   padding: 10px;
   text-align: center;
   color: #ccc;
 }
 
-.para{
+.para {
   background: #000;
   color: #ccc;
   padding: 10px;
@@ -33,17 +32,17 @@
   border-radius: 10px;
 }
 
-.col-md-5{
+.col-md-5 {
   margin-right: 10px;
 }
 
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.delivery{
+.delivery {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,10 +52,11 @@
   position: absolute;
   top: 24px;
   bottom: 0;
-  left: 23px;
+  left: 24px;
   right: 0;
-  height: 86%;
-  width: 95%;
+  height: 87%;
+  width: 90%;
+
   opacity: 0;
   border-radius: 10px;
   transition: 0.5s ease;
@@ -231,8 +231,6 @@ form {
   text-align: center;
 }
 
-
-
 .ac a {
   text-decoration: underline;
   color: #3a2d2d;
@@ -269,6 +267,27 @@ form {
 .social-mediaImg {
   width: 48px;
 }
+
+.contentspan {
+  color: #fabb04;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bannerimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannergirl {
+  width: 65%;
+}
 /* slider */
 .slidemain {
   font-family: sans-serif;
@@ -286,23 +305,30 @@ form {
 .scroller > span {
   position: absolute;
   top: 0;
-  left:0;
-  animation: slide 6s infinite;
+  left: 0;
+  animation: slide 10s infinite;
   font-weight: bold;
-  color: #DFCA77;
+  color: #fabb04;
+  text-align: left;
 }
 @keyframes slide {
   0% {
     top: 0;
   }
-  25% {
+  15% {
     top: -1.2em;
   }
-  50% {
+  30% {
     top: -2.4em;
   }
-  75% {
+  45% {
     top: -3.6em;
+  }
+  60%{
+    top: -4.8em;
+  }
+  75%{
+    top: -6.0em;
   }
 }
 
@@ -311,7 +337,22 @@ form {
     padding: 2em;
     margin: 1em;
   }
-
+  .overlay {
+    position: absolute;
+    top: 24px;
+    bottom: 0;
+    left: 23px;
+    right: 0;
+    height: 87%;
+    width: 93%;
+    opacity: 0;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    background-color: #19192197;
+  }
+  .overlay {
+    opacity: 1;
+  }
   .login-text {
     font-size: 1.5em;
   }
@@ -366,19 +407,7 @@ form {
   .container h2 span {
     font-size: medium;
   }
-  .overlay {
-    position: absolute;
-    top: 24px;
-    bottom: 0;
-    left: 23px;
-    right: 0;
-    height: 86%;
-    width: 91%;
-    opacity: 0;
-    border-radius: 10px;
-    transition: 0.5s ease;
-    background-color: #19192197;
-  }
+
   /* .ValueCard{
     position: relative;
     width:100%;
@@ -391,8 +420,8 @@ form {
     left: 149px;
 } */
 
-/* modal */
-  .css-1yd8pjp{
-    width:95% ;
+  /* modal */
+  .css-1yd8pjp {
+    width: 95%;
   }
 }
