@@ -8,7 +8,6 @@ import { fShortenNumber } from '../../../utils/formatNumber';
 // components
 import Iconify from '../../../components/iconify';
 
-
 // ----------------------------------------------------------------------
 
 const StyledIcon = styled('div')(({ theme }) => ({
@@ -33,11 +32,10 @@ ValueStoreWidget.propTypes = {
 };
 
 export default function ValueStoreWidget({ heading, title, total, icon, color = 'primary', sx, ...other }) {
-  
   const button = {
     background: '#000',
     color: '#fff',
-    marginTop: "10px", 
+    marginTop: '10px',
     '&:hover': {
       background: '#000',
       color: '#fff',
@@ -46,7 +44,7 @@ export default function ValueStoreWidget({ heading, title, total, icon, color = 
   return (
     <Card
       sx={{
-        width: "100%",
+        width: '100%',
         py: 5,
         boxShadow: 0,
         textAlign: 'center',
@@ -66,7 +64,7 @@ export default function ValueStoreWidget({ heading, title, total, icon, color = 
             )} 100%)`,
         }}
       >
-        <Iconify sx={{ color: '#000' }} icon={icon} width={24} height={24} />
+        <Iconify sx={{ color: '#000' }} icon={icon} width="50px" height="50px" />
       </StyledIcon>
 
       <Typography variant="h3">{fShortenNumber(total)}</Typography>

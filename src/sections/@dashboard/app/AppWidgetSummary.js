@@ -55,9 +55,9 @@ export default function AppWidgetSummary({ title, total, icon, color = 'primary'
         }}
       >
         {other.type === 'img' ? (
-          <img src={`/assets/icons/navbar/${icon}.svg`} alt="My Value Coins" />
+          <img src={`/assets/icons/navbar/${icon}.svg`} alt="My Value Coins" width="50px" height="50px" />
         ) : (
-          <Iconify sx={{ color: '#000' }} icon={icon} width={24} height={24} />
+          <Iconify sx={{ color: '#000' }} icon={icon} width="50px" height="50px" />
         )}
       </StyledIcon>
 

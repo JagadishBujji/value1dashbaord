@@ -58,7 +58,7 @@ export default function DashboardAppPage() {
         <Grid className="banner" container spacing={3} sx={{ mb: 5 }}>
           <Grid item xs={12} sm={6} md={6}>
             <Typography variant="h2" sx={{ m: 5, color: '#ccc' }}>
-              Earn <span className='contentspan'>24k 999 Gold</span>
+              Earn <span className="contentspan">24k 999 Gold</span>
               <br />
               On Your Every
               <br />
@@ -129,7 +129,11 @@ export default function DashboardAppPage() {
               className="explore-image"
             />
             <div className="overlay">
-              <div className="text">Digital Gold</div>
+              <div className="text">
+                <a href="https://value1.augmont.com/" className='gold' target="_blank" rel="noreferrer">
+                  Digital Gold
+                </a>
+              </div>
             </div>
           </Grid>
 
@@ -143,7 +147,11 @@ export default function DashboardAppPage() {
               className="explore-image"
             />
             <div className="overlay">
-              <div className="text">Travel</div>
+              <div className="text">
+                <a href="https://value1.world/" className='gold' target="_blank" rel="noreferrer">
+                  Travel
+                </a>
+              </div>
             </div>
           </Grid>
 
@@ -157,7 +165,11 @@ export default function DashboardAppPage() {
               className="explore-image"
             />
             <div className="overlay">
-              <div className="text">Deals</div>
+              <div className="text">
+                <a href="https://deals.value1.in/" className='gold' target="_blank" rel="noreferrer">
+                  Deals
+                </a>
+              </div>
             </div>
           </Grid>
 
@@ -265,7 +277,6 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
-         
           <Grid item xs={12} sm={6} md={3}>
             <ValueStoreWidget
               sx={{ background: '#DFCA77', color: '#000' }}
@@ -286,7 +297,7 @@ export default function DashboardAppPage() {
             >
               Collect Now
             </Button> */}
-             <ValueExpenseModal
+            <ValueExpenseModal
               isOpen={goodDeedsModal}
               isButtonDisabled={isButtonDisabled}
               handleClose={() => setGoodDeedsModal(false)}

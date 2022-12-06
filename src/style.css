@@ -67,15 +67,23 @@
   opacity: 1;
 }
 
+.gold {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .text {
   color: white;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 600;
   position: absolute;
-  top: 21%;
-  left: 32%;
+  top: 50%;
+  left: 44%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-42%, -50%);
   text-align: center;
   padding: 10px;
 }
@@ -328,11 +336,11 @@ form {
   45% {
     top: -3.6em;
   }
-  60%{
+  60% {
     top: -4.8em;
   }
-  75%{
-    top: -6.0em;
+  75% {
+    top: -6em;
   }
 }
 
