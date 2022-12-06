@@ -69,7 +69,7 @@ export default function ValueStoreWidget({ heading, title, total, icon, color = 
 
       <Typography variant="h3">{fShortenNumber(total)}</Typography>
 
-      <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
+      <Typography variant="subtitle2" sx={{ opacity: 0.72, fontFamily: 'Space Grotesk' }}>
         {title}
       </Typography>
       <Button sx={button} variant="contained">

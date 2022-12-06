@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 .css-1byr0t {
   background: #111116;
@@ -8,6 +11,7 @@
 .explore {
   position: relative;
   width: 50%;
+  font-family: 'Space Grotesk', sans-serif;
 }
 .explore-image {
   display: block;

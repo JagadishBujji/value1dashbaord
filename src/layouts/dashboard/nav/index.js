@@ -24,8 +24,8 @@ const StyledAccount = styled('div')(({ theme }) => ({
   alignItems: 'center',
   padding: theme.spacing(2, 2.5),
   borderRadius: Number(theme.shape.borderRadius) * 1.5,
-  backgroundColor: "#191921",
-  color: "#ccc"
+  backgroundColor: '#191921',
+  color: '#ccc',
 }));
 
 // ----------------------------------------------------------------------
@@ -51,7 +51,7 @@ export default function Nav({ openNav, onCloseNav }) {
     <Scrollbar
       sx={{
         height: 1,
-        '& .simplebar-content': { height: 1, display: 'flex', flexDirection: 'column', backgroundColor: "#111116" },
+        '& .simplebar-content': { height: 1, display: 'flex', flexDirection: 'column', backgroundColor: '#111116' },
       }}
     >
       <Box sx={{ px: 2.5, py: 3, display: 'inline-flex' }}>
@@ -76,7 +76,7 @@ export default function Nav({ openNav, onCloseNav }) {
         </Link>
       </Box>
 
-      <NavSection sx={{backgroundColor: "#111116"}}  data={navConfig} />
+      <NavSection sx={{ backgroundColor: '#111116', fontFamily: 'Signika' }} data={navConfig} />
 
       <Box sx={{ flexGrow: 1 }} />
 
@@ -123,7 +123,7 @@ export default function Nav({ openNav, onCloseNav }) {
               width: NAV_WIDTH,
               bgcolor: 'background.default',
               borderRightStyle: 'dashed',
-              background: "#111116"
+              background: '#111116',
             },
           }}
         >
