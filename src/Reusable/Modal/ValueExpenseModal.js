@@ -20,6 +20,7 @@ const style = {
   p: 4,
   background:"#000",
   color:"#fff"
+
 };
 const save = {
   bgcolor: '#FABB04',
@@ -48,7 +49,7 @@ const button = {
   },
 };
 
-export default function AddNewModal({ isOpen, handleClose, submitHandler, isButtonDisabled }) {
+export default function ValueExpenseModal({ isOpen, handleClose, submitHandler, isButtonDisabled }) {
   
   return (
     <div>
@@ -63,6 +64,7 @@ export default function AddNewModal({ isOpen, handleClose, submitHandler, isButt
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        
       >
         <Box sx={style}>
           {/* <div className="formHeadBtn"> */}
@@ -70,8 +72,8 @@ export default function AddNewModal({ isOpen, handleClose, submitHandler, isButt
           <Typography sx={{ mb: 2 }} id="modal-modal-title" variant="h6" component="h2">
             Form
           </Typography>
-          <Dropdown value1="Organ" value2="Blood" value3="others" title="Good Deed Type" />
-          <Dropdown value1="Pledge" value2="Action" title="Type" />
+          <Dropdown value1="Educational Expenses"  title="Educational Expenses" />
+          <Dropdown value1="Education"  title="Type" />
           <UploadFile />
           <div className="row FormBtn">
             <Button variant="contained" sx={save} onClick={submitHandler} disabled={isButtonDisabled}>

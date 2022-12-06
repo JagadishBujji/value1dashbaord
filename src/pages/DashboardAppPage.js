@@ -14,6 +14,7 @@ import AddNewModal from '../Reusable/Modal/AddNewModal';
 import { AppWidgetSummary } from '../sections/@dashboard/app';
 import ValueStoreWidget from '../sections/@dashboard/app/ValueStoreWidget';
 import SliderMain from '../components/slider/SliderMain';
+import ValueExpenseModal from '../Reusable/Modal/ValueExpenseModal';
 // import { before } from 'lodash';
 
 // ----------------------------------------------------------------------
@@ -264,6 +265,42 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
+         
+          <Grid item xs={12} sm={6} md={3}>
+            <ValueStoreWidget
+              sx={{ background: '#DFCA77', color: '#000' }}
+              title="Value Expenses"
+              total={1723315}
+              color="warning"
+              icon={'ic:round-currency-exchange'}
+              heading="Collect Now"
+              onClick={() => setGoodDeedsModal(true)}
+            />
+            {/* <Button
+              variant="contained"
+              className="ValueCardBtn"
+              sx={collectBtn}
+              onClick={() => {
+                navigate('/dashboard/valueexpenses');
+              }}
+            >
+              Collect Now
+            </Button> */}
+             <ValueExpenseModal
+              isOpen={goodDeedsModal}
+              isButtonDisabled={isButtonDisabled}
+              handleClose={() => setGoodDeedsModal(false)}
+              submitHandler={() => {
+                console.log('Storing data in db...');
+                setIsButtonDisabled(true);
+                setTimeout(() => {
+                  setIsButtonDisabled(false);
+                  setGoodDeedsModal(false);
+                }, 5000);
+                navigate('/dashboard/valueexpenses');
+              }}
+            />
+          </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <ValueStoreWidget
               sx={{ background: '#DFCA77', color: '#000' }}
@@ -282,30 +319,6 @@ export default function DashboardAppPage() {
               sx={collectBtn}
               onClick={() => {
                 navigate('/dashboard/valuebrands');
-              }}
-            >
-              Collect Now
-            </Button> */}
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <ValueStoreWidget
-              sx={{ background: '#DFCA77', color: '#000' }}
-              title="Value Expenses"
-              total={1723315}
-              color="warning"
-              icon={'ic:round-currency-exchange'}
-              heading="Collect Now"
-              onClick={() => {
-                navigate('/dashboard/valueexpenses');
-              }}
-            />
-            {/* <Button
-              variant="contained"
-              className="ValueCardBtn"
-              sx={collectBtn}
-              onClick={() => {
-                navigate('/dashboard/valueexpenses');
               }}
             >
               Collect Now
