@@ -327,6 +327,17 @@ form {
   color: #fabb04;
   text-align: left;
 }
+.profileimg{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.profileimginner{
+  border-radius: 50%;
+  height: 100%;
+  margin-right: 10px;
+}
 @keyframes slide {
   0% {
     top: 0;

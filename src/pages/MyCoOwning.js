@@ -1,8 +1,10 @@
 import Avatar from '@mui/material/Avatar';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 // @mui
 // import { NavLink } from 'react-router-hash-link';
 import { Grid, Container, Typography, Link } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 import Card from '@mui/material/Card';
 import { AppWidgetSummary } from '../sections/@dashboard/app';
 import ValueStoreWidget from '../sections/@dashboard/app/ValueStoreWidget';
@@ -19,6 +21,16 @@ export default function MyCoOwning() {
   // const handleCloseFilter = () => {
   //   setOpenFilter(false);
   // };
+  const [previewImage, setPreviewImage] = useState();
+  const [uImage, setUImage] = useState();
+  const handleImage = (img) => {
+    setUImage(img);
+    const reader = new FileReader();
+    reader.readAsDataURL(img);
+    reader.onloadend = () => {
+      setPreviewImage(reader.result);
+    };
+  };
 
   return (
     <>
@@ -52,14 +64,35 @@ export default function MyCoOwning() {
                 // total={"abc1234678"}
                 icon={'mdi:post-outline'}
               />
-            
             </a>
           </Grid>
         </Grid>
         <Card sx={{ width: '100%', bgcolor: '#191921' }}>
           <Grid container spacing={3} sx={{ mb: 5 }}>
             <Grid item xs={12} sm={6} md={5} className="profile">
-              <Avatar src="/avatar_default.jpg" sx={{ width: '100px', height: '100px', m: 2 }} />
+              <div className="profileimg">
+                
+                {previewImage ? (
+                  <img src={previewImage} width="100" alt="" className="profileimginner" />
+                ) : (
+                  <Avatar sx={{ width: 56, height: 56 }} />
+                )}
+               
+             
+                <form action="/action_page.php">
+                  <input
+                    type="file"
+                    onChange={(e) => {
+                      handleImage(e.target.files[0]);
+                    }}
+                    accept="image/*"
+                    id="myFile"
+                    name="filename"
+                    style = {{color:"#fff"}}
+                  />
+                </form>
+                </div>
+              
               <Typography sx={{ color: '#fff', m: 2 }}>Arul</Typography>
               <Typography sx={{ m: 2, color: '#fff' }}>arulprakash134@gmail.com</Typography>
             </Grid>

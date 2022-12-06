@@ -57,8 +57,8 @@ export default function DashboardAppPage() {
         /> */}
         <Grid className="banner" container spacing={3} sx={{ mb: 5 }}>
           <Grid item xs={12} sm={6} md={6}>
-            <Typography variant="h2" sx={{ m: 5, color: '#ccc', fontFamily: 'Space Grotesk' }}>
-              Earn <span className="contentspan">24k 999 Gold</span>
+            <Typography variant="h2" sx={{ m: 5, color: '#ccc' }}>
+              Earn <span className='contentspan'>24k 999 Gold</span>
               <br />
               On Your Every
               <br />
@@ -130,10 +130,15 @@ export default function DashboardAppPage() {
             />
             <div className="overlay">
               <div className="text">
-                <a href="https://value1.augmont.com/" className="gold" target="_blank" rel="noreferrer">
-                  Digital Gold
-                </a>
-              </div>
+              <a 
+              href="https://value1.augmont.com/" 
+              target="_blank"
+              rel="noreferrer"
+              className="gold"
+              >
+              Digital Gold
+              </a>
+                </div>
             </div>
           </Grid>
 
@@ -148,10 +153,12 @@ export default function DashboardAppPage() {
             />
             <div className="overlay">
               <div className="text">
-                <a href="https://value1.world/" className="gold" target="_blank" rel="noreferrer">
-                  Travel
-                </a>
-              </div>
+              <a 
+              href="https://value1.world/" 
+              target="_blank"
+              rel="noreferrer"
+              className="gold"
+              >Travel</a></div>
             </div>
           </Grid>
 
@@ -166,10 +173,13 @@ export default function DashboardAppPage() {
             />
             <div className="overlay">
               <div className="text">
-                <a href="https://deals.value1.in/" className="gold" target="_blank" rel="noreferrer">
-                  Deals
-                </a>
-              </div>
+              <a 
+              href="https://deals.value1.in/" 
+              target="_blank"
+              rel="noreferrer"
+              className="gold"
+              >
+                Deals</a></div>
             </div>
           </Grid>
 
@@ -277,6 +287,7 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
+         
           <Grid item xs={12} sm={6} md={3}>
             <ValueStoreWidget
               sx={{ background: '#DFCA77', color: '#000' }}
@@ -297,7 +308,7 @@ export default function DashboardAppPage() {
             >
               Collect Now
             </Button> */}
-            <ValueExpenseModal
+             <ValueExpenseModal
               isOpen={goodDeedsModal}
               isButtonDisabled={isButtonDisabled}
               handleClose={() => setGoodDeedsModal(false)}
