@@ -64,7 +64,11 @@ export default function ValueStoreWidget({ heading, title, total, icon, color = 
             )} 100%)`,
         }}
       >
+         {other.type === 'img' ? (
+          <img src={`/assets/icons/navbar/${icon}.svg`} alt="My Value Coins" width="50px" height="50px" />
+        ) :(
         <Iconify sx={{ color: '#000' }} icon={icon} width="50px" height="50px" />
+        )}
       </StyledIcon>
 
       <Typography variant="h3">{fShortenNumber(total)}</Typography>

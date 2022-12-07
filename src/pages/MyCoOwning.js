@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import Card from '@mui/material/Card';
 import { AppWidgetSummary } from '../sections/@dashboard/app';
 import ValueStoreWidget from '../sections/@dashboard/app/ValueStoreWidget';
+import ProfileCard from '../Reusable/ProfileCard/ProfileCard';
 
 // ----------------------------------------------------------------------
 
@@ -43,6 +44,16 @@ export default function MyCoOwning() {
           My Co-Owning Journey
         </Typography>
         <Grid container spacing={3} sx={{ mb: 5 }}>
+        <Grid item xs={12} sm={6} md={3}>
+        <ValueStoreWidget
+              sx={{ background: '#DFCA77', color: '#000' }}
+              title="Subscription"
+              icon={'mdi:subscriber-identification-module'}
+              heading="Subscribe"
+            />
+          </Grid>
+          </Grid>
+        <Grid container spacing={3} sx={{ mb: 5 }}>
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary
               sx={{ background: '#DFCA77', color: '#000' }}
@@ -70,29 +81,7 @@ export default function MyCoOwning() {
         <Card sx={{ width: '100%', bgcolor: '#191921' }}>
           <Grid container spacing={3} sx={{ mb: 5 }}>
             <Grid item xs={12} sm={6} md={5} className="profile">
-              <div className="profileimg">
-                
-                {previewImage ? (
-                  <img src={previewImage} width="100" alt="" className="profileimginner" />
-                ) : (
-                  <Avatar sx={{ width: 56, height: 56 }} />
-                )}
-               
-             
-                <form action="/action_page.php">
-                  <input
-                    type="file"
-                    onChange={(e) => {
-                      handleImage(e.target.files[0]);
-                    }}
-                    accept="image/*"
-                    id="myFile"
-                    name="filename"
-                    style = {{color:"#fff"}}
-                  />
-                </form>
-                </div>
-              
+              <ProfileCard />
               <Typography sx={{ color: '#fff', m: 2 }}>Arul</Typography>
               <Typography sx={{ m: 2, color: '#fff' }}>arulprakash134@gmail.com</Typography>
             </Grid>

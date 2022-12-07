@@ -259,7 +259,8 @@ export default function DashboardAppPage() {
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Good Deeds"
               total={714000}
-              icon={'ic:round-gpp-good'}
+              type="img"
+              icon={'like'}
               onClick={() => setGoodDeedsModal(true)}
               heading="Collect Now"
             />
@@ -294,7 +295,9 @@ export default function DashboardAppPage() {
               title="Value Expenses"
               total={1723315}
               color="warning"
-              icon={'ic:round-currency-exchange'}
+              type="img"
+              icon={'expenses'}
+      
               heading="Collect Now"
               onClick={() => setGoodDeedsModal(true)}
             />
@@ -329,7 +332,8 @@ export default function DashboardAppPage() {
               title="Value Brands"
               total={1352831}
               color="info"
-              icon={'tabler:brand-booking'}
+              type="img"
+              icon={'brand'}
               heading="Collect Now"
               onClick={() => {
                 navigate('/dashboard/valuebrands');
