@@ -17,8 +17,7 @@ const columns = [
     description: 'This column has a value getter and is not sortable.',
     sortable: false,
     width: 160,
-    valueGetter: (params) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+    valueGetter: (params) => `${params.row.firstName || ''} ${params.row.lastName || ''}`,
   },
 ];
 
@@ -37,13 +36,7 @@ const rows = [
 export default function DonationTable() {
   return (
     <div style={{ height: 500, width: '100%' }}>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-      />
+      <DataGrid rows={rows} columns={columns} pageSize={5} rowsPerPageOptions={[5]} checkboxSelection />
     </div>
   );
 }

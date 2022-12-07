@@ -19,7 +19,7 @@ const RegisterPage = () => {
     const getId = async () => {
       setIsPending(true);
       await axios
-        .get('http://13.233.195.184/getMemId')
+        .get('http://app.value1.in/getMemId')
         .then((res) => {
           console.log(res);
           if (res.data.lastId) {
@@ -57,7 +57,7 @@ const RegisterPage = () => {
     console.log(formData);
     setIsPending(true);
     await axios
-      .post('http://13.233.195.184/registerUser', formData)
+      .post('http://app.value1.in/registerUser', formData)
       .then((res) => {
         const data = res.data;
         console.log(res);
