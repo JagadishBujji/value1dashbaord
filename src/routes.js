@@ -10,7 +10,7 @@ import LoginPage from './pages/LoginPage';
 import MyCoOwning from './pages/MyCoOwning';
 import DashboardAppPage from './pages/DashboardAppPage';
 import GoldCoins from './pages/GoldCoins';
-import RevenueStore from './pages/RevenueStore';
+// import RevenueStore from './pages/RevenueStore';
 import ValueBrand from './pages/ValueBrand';
 import RegisterPage from './pages/RegisterPage';
 import ValueExpenseTable from './Reusable/Table/ValueExpenseTable';
@@ -20,20 +20,17 @@ import ValueExpenseTable from './Reusable/Table/ValueExpenseTable';
 export default function Router() {
   const user = JSON.parse(localStorage.getItem('user'));
   const routes = useRoutes([
-    // {
-    //   path: '/login',
-    //   element: user ? <Navigate to="/dashboard" /> : <LoginPage />,
-
-    // },
-    // {
-    //   path: '/register',
-    //   element: user? <Navigate to="/dashboard"/> : <RegisterPage/>
-    // },
-
+    {
+      path: '/login',
+      element: user ? <Navigate to="/dashboard" /> : <LoginPage />,
+    },
+    {
+      path: '/register',
+      element: user ? <Navigate to="/dashboard" /> : <RegisterPage />,
+    },
     {
       path: '/dashboard',
-      element: <DashboardLayout />,
-      // user?  <DashboardLayout /> : <LoginPage/>,
+      element: user ? <DashboardLayout /> : <LoginPage />,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
@@ -48,11 +45,9 @@ export default function Router() {
     },
 
     {
-      element: <SimpleLayout />,
-      //  user ? <SimpleLayout /> : <LoginPage />,
+      element: user ? <SimpleLayout /> : <LoginPage />,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
-        // { path: '404', element: <Page404 /> },
         { path: '*', element: <Navigate to="/404" /> },
       ],
     },

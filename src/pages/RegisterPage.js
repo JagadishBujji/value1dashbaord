@@ -2,6 +2,7 @@ import '../style.css';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const RegisterPage = () => {
   const navigate = useNavigate();
@@ -15,11 +16,12 @@ const RegisterPage = () => {
     membership_id: '',
   });
   const [lastId, setLastId] = useState();
+
   useEffect(() => {
     const getId = async () => {
       setIsPending(true);
       await axios
-        .get('http://13.233.195.184/getMemId')
+        .get('http://app.value1.in/getMemId')
         .then((res) => {
           console.log(res);
           if (res.data.lastId) {
@@ -56,8 +58,15 @@ const RegisterPage = () => {
     e.preventDefault();
     console.log(formData);
     setIsPending(true);
+
+    if (formData.phone_number === '' || formData.phone_number === undefined || formData.phone_number === null) {
+      alert('Enter Valid Phone Number!!!');
+      setIsPending(false);
+      return;
+    }
+
     await axios
-      .post('http://13.233.195.184/registerUser', formData)
+      .post('http://app.value1.in/registerUser', formData)
       .then((res) => {
         const data = res.data;
         console.log(res);
@@ -160,7 +169,7 @@ const RegisterPage = () => {
             </div>
             <div className="item submit">
               <button disabled={isPending} type="submit">
-                Submit
+                {isPending ? <CircularProgress color="inherit" size={20} /> : 'Submit'}
               </button>
             </div>
             {/* <span className="remember">
