@@ -68,7 +68,7 @@ export default function AddNewModal({ isOpen, handleClose, submitHandler, isButt
           {/* <div className="formHeadBtn"> */}
 
           <Typography sx={{ mb: 2 }} id="modal-modal-title" variant="h6" component="h2">
-            Form
+            Good Deeds
           </Typography>
           <Dropdown value1="Organ" value2="Blood" value3="others" title="Good Deed Type" />
           <Dropdown value1="Pledge" value2="Action" title="Type" />

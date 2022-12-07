@@ -24,6 +24,7 @@ export default function DashboardAppPage() {
   const navigate = useNavigate();
 
   const [goodDeedsModal, setGoodDeedsModal] = useState(false);
+  const[expenseModal,setExpenseModal]= useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const explore = {
@@ -299,7 +300,7 @@ export default function DashboardAppPage() {
               icon={'expenses'}
       
               heading="Collect Now"
-              onClick={() => setGoodDeedsModal(true)}
+              onClick={() => setExpenseModal(true)}
             />
             {/* <Button
               variant="contained"
@@ -312,15 +313,15 @@ export default function DashboardAppPage() {
               Collect Now
             </Button> */}
              <ValueExpenseModal
-              isOpen={goodDeedsModal}
+              isOpen={expenseModal}
               isButtonDisabled={isButtonDisabled}
-              handleClose={() => setGoodDeedsModal(false)}
+              handleClose={() => setExpenseModal(false)}
               submitHandler={() => {
                 console.log('Storing data in db...');
                 setIsButtonDisabled(true);
                 setTimeout(() => {
                   setIsButtonDisabled(false);
-                  setGoodDeedsModal(false);
+                  setExpenseModal(false);
                 }, 5000);
                 navigate('/dashboard/valueexpenses');
               }}

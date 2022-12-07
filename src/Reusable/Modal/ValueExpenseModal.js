@@ -70,7 +70,7 @@ export default function ValueExpenseModal({ isOpen, handleClose, submitHandler, 
           {/* <div className="formHeadBtn"> */}
 
           <Typography sx={{ mb: 2 }} id="modal-modal-title" variant="h6" component="h2">
-            Form
+            Value Expenses
           </Typography>
           <Dropdown value1="Educational Expenses"  title="Educational Expenses" />
           <Dropdown value1="Education"  title="Type" />
