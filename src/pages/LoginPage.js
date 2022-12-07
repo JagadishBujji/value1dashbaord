@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
 import axios from 'axios';
+import CircularProgress from '@mui/material/CircularProgress';
 import { authentication } from '../Firebase/firebase';
 
 const LoginPage = () => {
@@ -33,6 +34,7 @@ const LoginPage = () => {
 
     if (phoneNumber === '' || phoneNumber === undefined || phoneNumber === null) {
       alert('Enter Valid Number!!!');
+      setIsPending(false);
       return;
     }
 
@@ -52,6 +54,7 @@ const LoginPage = () => {
           })
           .catch((err) => {
             console.log(err);
+            setIsPending(false);
           })
           .finally(() => {
             setIsPending(false);
@@ -137,7 +140,7 @@ const LoginPage = () => {
               </div>
               <div className="item submit">
                 <button disabled={isPending} type="submit" onClick={sendOtpHandler}>
-                  Send OTP
+                  {isPending ? <CircularProgress color="inherit" size={20} /> : 'Send OTP'}
                 </button>
               </div>
             </form>
