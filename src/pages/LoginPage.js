@@ -121,7 +121,7 @@ const LoginPage = () => {
           </div>
           <div id="sign-in-button" />
 
-          <h3 className="login-text">Login</h3>
+          <h3 className="login-text">SIGN IN</h3>
           {!otpSent ? (
             <form>
               <div className="item">
@@ -171,9 +171,9 @@ const LoginPage = () => {
             </form>
           )}
 
-          <span className="ac">
+          {/* <span className="ac">
             Don't have an Account? <a href="/register">Sign Up</a>
-          </span>
+          </span> */}
         </div>
       </div>
     </>

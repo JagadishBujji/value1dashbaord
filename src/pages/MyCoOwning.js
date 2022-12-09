@@ -40,19 +40,19 @@ export default function MyCoOwning() {
       </Helmet> */}
 
       <Container>
-        <Typography variant="h4" sx={{ color: '#fff', mb: 5 }}>
+        <Typography variant="h4" sx={{ color: '#fff', mb: 5, fontFamily: 'Space Grotesk' }}>
           My Co-Owning Journey
         </Typography>
-        <Grid container spacing={3} sx={{ mb: 5 }}>
-        <Grid item xs={12} sm={6} md={3}>
-        <ValueStoreWidget
+        <Grid container spacing={3} sx={{ mb: 5, fontFamily: 'Space Grotesk' }}>
+          <Grid item xs={12} sm={6} md={3}>
+            <ValueStoreWidget
               sx={{ background: '#DFCA77', color: '#000' }}
               title="Subscription"
               icon={'mdi:subscriber-identification-module'}
               heading="Subscribe"
             />
           </Grid>
-          </Grid>
+        </Grid>
         <Grid container spacing={3} sx={{ mb: 5 }}>
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary
@@ -82,13 +82,21 @@ export default function MyCoOwning() {
           <Grid container spacing={3} sx={{ mb: 5 }}>
             <Grid item xs={12} sm={6} md={5} className="profile">
               <ProfileCard />
-              <Typography sx={{ color: '#fff', m: 2 }}>Arul</Typography>
-              <Typography sx={{ m: 2, color: '#fff' }}>arulprakash134@gmail.com</Typography>
+              <Typography sx={{ color: '#fff', m: 2, fontFamily: 'Space Grotesk' }}>Arul</Typography>
+              <Typography sx={{ m: 2, color: '#fff', fontFamily: 'Space Grotesk' }}>
+                arulprakash134@gmail.com
+              </Typography>
             </Grid>
             <Grid item xs={12} sm={6} md={7} className="profile">
-              <Typography sx={{ m: 2, color: '#fff', textAlign: 'left' }}>Phone:9089700080</Typography>
-              <Typography sx={{ m: 2, color: '#fff', textAlign: 'left' }}>Address:No.23,s city,chennai-7</Typography>
-              <Typography sx={{ m: 2, color: '#fff', textAlign: 'left' }}>MemberShip Id:123</Typography>
+              <Typography sx={{ m: 2, color: '#fff', textAlign: 'left', fontFamily: 'Space Grotesk' }}>
+                Phone:9089700080
+              </Typography>
+              <Typography sx={{ m: 2, color: '#fff', textAlign: 'left', fontFamily: 'Space Grotesk' }}>
+                Address:No.23,s city,chennai-7
+              </Typography>
+              <Typography sx={{ m: 2, color: '#fff', textAlign: 'left', fontFamily: 'Space Grotesk' }}>
+                MemberShip Id:123
+              </Typography>
             </Grid>
           </Grid>
         </Card>
