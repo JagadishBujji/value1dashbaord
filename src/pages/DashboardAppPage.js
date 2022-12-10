@@ -15,6 +15,7 @@ import { AppWidgetSummary } from '../sections/@dashboard/app';
 import ValueStoreWidget from '../sections/@dashboard/app/ValueStoreWidget';
 import SliderMain from '../components/slider/SliderMain';
 import ValueExpenseModal from '../Reusable/Modal/ValueExpenseModal';
+import LoginModal from '../Reusable/Modal/LoginModal';
 // import { before } from 'lodash';
 
 // ----------------------------------------------------------------------
@@ -22,7 +23,10 @@ import ValueExpenseModal from '../Reusable/Modal/ValueExpenseModal';
 export default function DashboardAppPage() {
   const theme = useTheme();
   const navigate = useNavigate();
-
+  // Modal
+  const [showModal , setShowodal] = useState(true);
+  const handleClick = () => setShowodal(false);
+  // modal end
   const [goodDeedsModal, setGoodDeedsModal] = useState(false);
   const[expenseModal,setExpenseModal]= useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -42,6 +46,7 @@ export default function DashboardAppPage() {
   };
   return (
     <>
+    {showModal && <LoginModal onCancel={handleClick} open={showModal}/>}
       <Helmet>
         <title> Dashboard | Value1 </title>
       </Helmet>

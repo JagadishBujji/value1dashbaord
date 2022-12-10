@@ -391,7 +391,14 @@ input[type="file"] {
     top: -6em;
   }
 }
+/* Login Modal */
+.LoginBtn{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
 
+/* End  Login Modal */
 @media only screen and (max-width: 500px) {
   .container-wrapper {
     padding: 2em;
